@@ -2,6 +2,10 @@
 {
     public enum CategoryType
     {
-        
+        Inzet,
+        Onderzoek,
+        Programmeren,
+        Samenwerken,
+        Concepten
     }
 }
