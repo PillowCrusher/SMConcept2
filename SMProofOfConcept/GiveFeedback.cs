@@ -13,13 +13,7 @@ using SMProofOfConcept.Classes.Database;
 namespace SMProofOfConcept
 {
     public partial class GiveFeedback : Form
-    {
-        CategoryType cat;
-        DatabaseConnection db;
-        String User;
-        String Receiver;
-        String Query;
-        
+    {        
         public GiveFeedback()
         {
             InitializeComponent();
@@ -42,7 +36,12 @@ namespace SMProofOfConcept
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(rdb_Concepten.Checked == true)
+            CategoryType cat;
+            String User = "test";
+            String Receiver = "te12st";
+            String Query;
+            DatabaseConnection db = new DatabaseConnection();
+            if (rdb_Concepten.Checked == true)
             {
                 cat = CategoryType.Concepten;
             }
@@ -62,15 +61,23 @@ namespace SMProofOfConcept
             {
                 cat = CategoryType.Samenwerken;
             }
+            else
+            {
+                //default
+                cat = CategoryType.Inzet;
+            }
             String feedbacktext = textBox1.Text;
             // SMFeedback
-            // SendTo / SendFrom
+            // SendTo 
+            // SendFrom
             // FeedBack
+            // Category
             // DateTime
-            Query = "Insert Into SMFeedback (FeedbackId,SendTo, SendFrom,FeedBack,DateTime) VALUES(NULL, '";
+            Query = "INSERT INTO SMFeedback (FeedbackId,SendTo, SendFrom,FeedBack,Category,DateTime) VALUES(NULL, '";
             Query += Receiver + "','";
             Query += User + "','";
             Query += feedbacktext + "','";
+            Query += cat.ToString() + "','";
             Query += DateTime.Now.ToString() + "')";
             db.sendQuery(Query);
             Close();

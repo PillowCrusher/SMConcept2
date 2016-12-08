@@ -37,7 +37,7 @@ namespace SMProofOfConcept
 
             if(dbLogin.Count() == 1)
             {
-                //Login succesfull
+                //Login succesfull     
             }
             else
             {
