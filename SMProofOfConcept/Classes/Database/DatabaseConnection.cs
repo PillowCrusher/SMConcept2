@@ -27,7 +27,6 @@ namespace SMProofOfConcept.Classes.Database
         {
             string querySend = "http://i291343.iris.fhict.nl/database.php?query=" + queryBuilder(query);
             string jsonString = "";
-            List<Rating> result = new List<Rating>();
             try
             {
                 using (WebClient wc = new WebClient())
