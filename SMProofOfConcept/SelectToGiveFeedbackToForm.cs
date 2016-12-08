@@ -22,38 +22,92 @@ namespace SMProofOfConcept
 
         private void label5_Click(object sender, EventArgs e)
         {
-            SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Ricky");
-            feedbackForm.ShowDialog();
+            if (login.Username == "Ricky")
+            {
+                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
+                requireFeedbackForm.ShowDialog();
+            }
+            else
+            {
+                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Ricky");
+                feedbackForm.ShowDialog();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Cas");
-            feedbackForm.ShowDialog();
+            if (login.Username == "Cas")
+            {
+                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
+                requireFeedbackForm.ShowDialog();
+            }
+            else
+            {
+                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Cas");
+                feedbackForm.ShowDialog();
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-            SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login,"Jeroen");
-            feedbackForm.ShowDialog();
+            if (login.Username == "Jeroen")
+            {
+                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
+                requireFeedbackForm.ShowDialog();
+            }
+            else
+            {
+                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Jeroen");
+                feedbackForm.ShowDialog();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
-            SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Mark");
-            feedbackForm.ShowDialog();
+            if (login.Username == "Mark")
+            {
+                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
+                requireFeedbackForm.ShowDialog();
+            }
+            else
+            {
+                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Mark");
+                feedbackForm.ShowDialog();
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "John");
-            feedbackForm.ShowDialog();
+            if (login.Username == "John")
+            {
+                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
+                requireFeedbackForm.ShowDialog();
+            }
+            else
+            {
+                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "John");
+                feedbackForm.ShowDialog();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Dennis");
-            feedbackForm.ShowDialog();
+            if (login.Username == "Dennis")
+            {
+                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
+                requireFeedbackForm.ShowDialog();
+            }
+            else
+            {
+                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Dennis");
+                feedbackForm.ShowDialog();
+            }
+        }
+
+
+        private void btn_askFeedback_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
