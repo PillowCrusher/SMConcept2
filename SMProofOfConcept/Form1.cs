@@ -39,7 +39,10 @@ namespace SMProofOfConcept
             {
                 //Login succesfull  
                 SelectToGiveFeedbackToForm form = new SelectToGiveFeedbackToForm(dbLogin[0]);
-                form.ShowDialog();
+                
+                Hide();
+                form.Closed += (s, args) => Close();
+                form.Show();
             }
             else
             {

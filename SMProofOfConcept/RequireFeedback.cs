@@ -42,7 +42,7 @@ namespace SMProofOfConcept
         private void btn_Aanvragen_Click(object sender, EventArgs e)
         {
             DatabaseConnection dbCon = new DatabaseConnection();
-            string query = "INSERT INTO SMRequestFeedback (RequireFeedbackId, AskedFrom, AskedTo, Category) VALUES (NULL, '";
+            string query = "INSERT INTO SMRequireFeedback (RequireFeedbackId, AskedFrom, AskedTo, Category) VALUES (NULL, '";
 
             List<string> names = GetNames();
             List<string> categories = GetCategories();
@@ -51,6 +51,11 @@ namespace SMProofOfConcept
 
             foreach(string name in names)
             {
+                if (categories.Count == 0)
+                {
+                    MessageBox.Show("Please choose at least one category");
+                    return;
+                }
                 foreach (string categorie in categories)
                 {
                     if(isFirst)
@@ -69,6 +74,9 @@ namespace SMProofOfConcept
                     }                
                 }
             }
+
+            dbCon.sendQuery(query);
+            Close();
 
         }
 
