@@ -23,7 +23,7 @@ namespace SMProofOfConcept.Classes.Database
          * 
          * @param query
          */
-        public List<Rating> sendQuery(string query)
+        public string sendQuery(string query)
         {
             string querySend = "http://i291343.iris.fhict.nl/database.php?query=" + queryBuilder(query);
             string jsonString = "";
@@ -33,21 +33,20 @@ namespace SMProofOfConcept.Classes.Database
                 using (WebClient wc = new WebClient())
                 {
                     jsonString = wc.DownloadString(querySend);
-                    result = convertJson(jsonString);
                 }
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 
             }
-            return result;
+            return jsonString;
         }
 
         /**
          * 
          * @param Json
          */
-        private List<Rating> convertJson(string jsonString)
+        /*private List<Rating> convertJson(string jsonString)
         {
             List<Rating> result = new List<Rating>();
             DatabaseRating[] dbRating = JsonConvert.DeserializeObject<DatabaseRating[]>(jsonString);
@@ -60,15 +59,15 @@ namespace SMProofOfConcept.Classes.Database
             }
 
             return result;
-        }
+        }*/
 
     }
 
-    public class DatabaseRating
+    /*public class DatabaseRating
     {
         public string Name { get; set; }
         public string Rating { get; set; }
         public string Category { get; set; }
         public string DateTime { get; set; }
-    }
+    }*/
 }
