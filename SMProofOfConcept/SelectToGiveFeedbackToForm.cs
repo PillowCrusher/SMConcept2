@@ -24,8 +24,7 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Ricky")
             {
-                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
-                requireFeedbackForm.ShowDialog();
+
             }
             else
             {
@@ -38,8 +37,7 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Cas")
             {
-                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
-                requireFeedbackForm.ShowDialog();
+
             }
             else
             {
@@ -52,8 +50,7 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Jeroen")
             {
-                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
-                requireFeedbackForm.ShowDialog();
+
             }
             else
             {
@@ -66,8 +63,7 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Mark")
             {
-                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
-                requireFeedbackForm.ShowDialog();
+
             }
             else
             {
@@ -80,8 +76,7 @@ namespace SMProofOfConcept
         {
             if (login.Username == "John")
             {
-                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
-                requireFeedbackForm.ShowDialog();
+
             }
             else
             {
@@ -94,8 +89,7 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Dennis")
             {
-                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
-                requireFeedbackForm.ShowDialog();
+             
             }
             else
             {
@@ -107,7 +101,8 @@ namespace SMProofOfConcept
 
         private void btn_askFeedback_Click(object sender, EventArgs e)
         {
-
+            RequireFeedback requireFeedbackForm = new RequireFeedback(login);
+            requireFeedbackForm.ShowDialog();
         }
     }
 }
