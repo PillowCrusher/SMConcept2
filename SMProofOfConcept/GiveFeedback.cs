@@ -73,7 +73,7 @@ namespace SMProofOfConcept
             Query += feedbacktext + "','";
             Query += DateTime.Now.ToString() + "')";
             db.sendQuery(Query);
-            Form.ActiveForm.Close();
+            Close();
         }
     }
 }
