@@ -16,5 +16,15 @@ namespace SMProofOfConcept
         {
             InitializeComponent();
         }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            if(tb_Username.Text == "" || tb_Password.Text == "")
+            {
+                MessageBox.Show("Everything needs to be filled in");
+            }
+
+
+        }
     }
 }
