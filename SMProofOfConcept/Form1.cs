@@ -37,7 +37,9 @@ namespace SMProofOfConcept
 
             if(dbLogin.Count() == 1)
             {
-                //Login succesfull     
+                //Login succesfull  
+                SelectToGiveFeedbackToForm form = new SelectToGiveFeedbackToForm(dbLogin[0]);
+                form.ShowDialog();
             }
             else
             {
