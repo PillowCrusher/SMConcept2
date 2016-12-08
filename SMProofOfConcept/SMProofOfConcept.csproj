@@ -67,10 +67,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
+    <Compile Include="SelectToGiveFeedbackToForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectToGiveFeedbackToForm.Designer.cs">
+      <DependentUpon>SelectToGiveFeedbackToForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SelectToGiveFeedbackToForm.resx">
+      <DependentUpon>SelectToGiveFeedbackToForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
