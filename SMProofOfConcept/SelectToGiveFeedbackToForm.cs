@@ -24,7 +24,8 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Ricky")
             {
-
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
             }
             else
             {
@@ -37,7 +38,8 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Cas")
             {
-
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
             }
             else
             {
@@ -50,7 +52,8 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Jeroen")
             {
-
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
             }
             else
             {
@@ -63,7 +66,8 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Mark")
             {
-
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
             }
             else
             {
@@ -76,7 +80,8 @@ namespace SMProofOfConcept
         {
             if (login.Username == "John")
             {
-
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
             }
             else
             {
@@ -89,7 +94,8 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Dennis")
             {
-             
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
             }
             else
             {
