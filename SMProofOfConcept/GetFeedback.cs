@@ -15,6 +15,7 @@ namespace SMProofOfConcept
     public partial class GetFeedback : Form
     {
         private DatabaseLogin login;
+        private DatabaseConnection dbCon = new DatabaseConnection();
         public GetFeedback(DatabaseLogin login)
         {
             InitializeComponent();
@@ -29,7 +30,6 @@ namespace SMProofOfConcept
 
         private void GetFeedbackFromDatabase()
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
             string query = "SELECT * FROM SMFeedback WHERE SendTo = '";
             query += login.Username + "'";
 
@@ -55,6 +55,7 @@ namespace SMProofOfConcept
 
         private void lbx_Feedback_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lbx_Feedback.SelectedIndex == -1) return;
             DatabaseFeedback dbFeedback = (DatabaseFeedback)lbx_Feedback.SelectedItem;
             lb_From.Text = dbFeedback.SendFrom;
             lb_Date.Text = dbFeedback.DateTime;
@@ -64,7 +65,21 @@ namespace SMProofOfConcept
 
         private void btn_Verwijder_Click(object sender, EventArgs e)
         {
+            DatabaseFeedback dbFeedback = (DatabaseFeedback)lbx_Feedback.SelectedItem;
+            string query = "DELETE FROM SMFeedback WHERE SendTo = '";
+            query += dbFeedback.SendTo + "' AND SendFrom = '";
+            query += dbFeedback.SendFrom + "' AND Feedback = '";
+            query += dbFeedback.Feedback + "' AND Category = '";
+            query += dbFeedback.Category + "' AND DateTime = '";
+            query += dbFeedback.DateTime + "'";
 
+            dbCon.sendQuery(query);
+            GetFeedbackFromDatabase();
+
+            lb_From.Text = "";
+            lb_Date.Text = "";
+            lb_Category.Text = "";
+            tb_Details.Text = "";
         }
     }
 

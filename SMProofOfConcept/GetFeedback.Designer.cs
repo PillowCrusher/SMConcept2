@@ -134,6 +134,7 @@
             this.tb_Details.Location = new System.Drawing.Point(304, 180);
             this.tb_Details.Multiline = true;
             this.tb_Details.Name = "tb_Details";
+            this.tb_Details.ReadOnly = true;
             this.tb_Details.Size = new System.Drawing.Size(686, 463);
             this.tb_Details.TabIndex = 8;
             // 
