@@ -122,5 +122,19 @@ namespace SMProofOfConcept
             RequireFeedback requireFeedbackForm = new RequireFeedback(login);
             requireFeedbackForm.ShowDialog();
         }
+
+        private void SelectToGiveFeedbackToForm_Resize(object sender, EventArgs e)
+        {
+            if (FormWindowState.Minimized == WindowState)
+                {
+                Hide();
+                }
+        }
+
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Show();
+            WindowState = FormWindowState.Normal;
+        }
     }
 }
