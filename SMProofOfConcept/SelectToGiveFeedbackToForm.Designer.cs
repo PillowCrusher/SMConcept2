@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectToGiveFeedbackToForm));
             this.lbl_cas = new System.Windows.Forms.Label();
             this.lbl_JohnSnow = new System.Windows.Forms.Label();
             this.lbl_Mark = new System.Windows.Forms.Label();
@@ -35,6 +37,7 @@
             this.lbl_Ricky = new System.Windows.Forms.Label();
             this.lbl_Jeroen = new System.Windows.Forms.Label();
             this.btn_askFeedback = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
             // 
             // lbl_cas
@@ -113,6 +116,13 @@
             this.btn_askFeedback.UseVisualStyleBackColor = true;
             this.btn_askFeedback.Click += new System.EventHandler(this.btn_askFeedback_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "FeedbackApp";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
+            // 
             // SelectToGiveFeedbackToForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -125,8 +135,10 @@
             this.Controls.Add(this.lbl_Mark);
             this.Controls.Add(this.lbl_JohnSnow);
             this.Controls.Add(this.lbl_cas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectToGiveFeedbackToForm";
             this.Text = "SelectToGiveFeedbackToForm";
+            this.Resize += new System.EventHandler(this.SelectToGiveFeedbackToForm_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +153,6 @@
         private System.Windows.Forms.Label lbl_Ricky;
         private System.Windows.Forms.Label lbl_Jeroen;
         private System.Windows.Forms.Button btn_askFeedback;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
