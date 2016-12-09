@@ -60,6 +60,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetFeedback.Designer.cs">
+      <DependentUpon>GetFeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiveFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetFeedback.resx">
+      <DependentUpon>GetFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
