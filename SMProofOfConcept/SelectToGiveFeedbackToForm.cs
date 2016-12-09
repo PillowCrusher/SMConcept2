@@ -24,8 +24,10 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Ricky")
             {
-                GetFeedback feedback = new GetFeedback(login);
-                feedback.ShowDialog();
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
             }
             else
             {
@@ -38,8 +40,10 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Cas")
             {
-                GetFeedback feedback = new GetFeedback(login);
-                feedback.ShowDialog();
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
             }
             else
             {
@@ -52,8 +56,10 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Jeroen")
             {
-                GetFeedback feedback = new GetFeedback(login);
-                feedback.ShowDialog();
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
             }
             else
             {
@@ -66,8 +72,10 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Mark")
             {
-                GetFeedback feedback = new GetFeedback(login);
-                feedback.ShowDialog();
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
             }
             else
             {
@@ -80,8 +88,10 @@ namespace SMProofOfConcept
         {
             if (login.Username == "John")
             {
-                GetFeedback feedback = new GetFeedback(login);
-                feedback.ShowDialog();
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
             }
             else
             {
@@ -94,8 +104,10 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Dennis")
             {
-                GetFeedback feedback = new GetFeedback(login);
-                feedback.ShowDialog();
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
             }
             else
             {
