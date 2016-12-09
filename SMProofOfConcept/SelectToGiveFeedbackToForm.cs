@@ -7,17 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SMProofOfConcept.Classes.Logic;
 
 namespace SMProofOfConcept
 {
     public partial class SelectToGiveFeedbackToForm : Form
     {
         private DatabaseLogin login;
-
+        private RatingLogic ratingLogic;
         public SelectToGiveFeedbackToForm(DatabaseLogin login)
         {
-            this.login = login;
             InitializeComponent();
+            this.login = login;
+            ratingLogic = new RatingLogic();
+            lbl_Dennis.Text = "Dennis " + ratingLogic.getRating("Dennis");
+            lbl_Jeroen.Text = "Jeroen " + ratingLogic.getRating("Jeroen");
+            lbl_JohnSnow.Text = "John " + ratingLogic.getRating("John");
+            lbl_Mark.Text = "Mark " + ratingLogic.getRating("Mark");
+            lbl_Ricky.Text = "Ricky " + ratingLogic.getRating("Ricky");
+            lbl_cas.Text = "Cas " + ratingLogic.getRating("Cas");
+
         }
 
         private void label5_Click(object sender, EventArgs e)

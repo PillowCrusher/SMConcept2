@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SMProofOfConcept.Classes.Model
 {
-    class Rating
+
+   public class Rating
     {
         private DateTime dateTime;
         private CategoryType type;
@@ -18,5 +19,11 @@ namespace SMProofOfConcept.Classes.Model
             this.v = v;
             this.dateTime = dateTime;
         }
+
+       public double getRating()
+       {
+           return v;
+       }
+
     }
 }

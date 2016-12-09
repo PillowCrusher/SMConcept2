@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Database\DatabaseConnection.cs" />
+    <Compile Include="Classes\Logic\RatingLogic.cs" />
     <Compile Include="Classes\Model\CategoryType.cs" />
     <Compile Include="Classes\Model\Names.cs" />
     <Compile Include="Classes\Model\Rating.cs" />
@@ -121,9 +122,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\Logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
