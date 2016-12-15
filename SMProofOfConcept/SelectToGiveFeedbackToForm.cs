@@ -15,116 +15,58 @@ namespace SMProofOfConcept
     {
         private DatabaseLogin login;
         private RatingLogic ratingLogic;
+        private FeedbackLogic feedbackLogic;
         public SelectToGiveFeedbackToForm(DatabaseLogin login)
         {
             InitializeComponent();
             this.login = login;
             ratingLogic = new RatingLogic();
-            lbl_Dennis.Text = "Dennis " + ratingLogic.getRating("Dennis");
-            lbl_Jeroen.Text = "Jeroen " + ratingLogic.getRating("Jeroen");
-            lbl_JohnSnow.Text = "John " + ratingLogic.getRating("John");
-            lbl_Mark.Text = "Mark " + ratingLogic.getRating("Mark");
-            lbl_Ricky.Text = "Ricky " + ratingLogic.getRating("Ricky");
-            lbl_cas.Text = "Cas " + ratingLogic.getRating("Cas");
-
+            feedbackLogic = new FeedbackLogic(login);
+            InitializeScreen();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void InitializeScreen()
         {
-            if (login.Username == "Ricky")
-            {
+            pb_Cas_Rating.Parent = pb_Cas;
+            pb_Cas_Rating.Location = new Point(pb_Cas_Rating.Location.X - pb_Cas.Location.X, pb_Cas_Rating.Location.Y - pb_Cas.Location.Y);
+            pb_Dennis_Rating.Parent = pb_Dennis;
+            pb_Dennis_Rating.Location = new Point(pb_Dennis_Rating.Location.X - pb_Dennis.Location.X, pb_Dennis_Rating.Location.Y - pb_Dennis.Location.Y);
+            pb_Jeroen_Rating.Parent = pb_Jeroen;
+            pb_Jeroen_Rating.Location = new Point(pb_Jeroen_Rating.Location.X - pb_Jeroen.Location.X, pb_Jeroen_Rating.Location.Y - pb_Jeroen.Location.Y);
+            pb_John_Rating.Parent = pb_John;
+            pb_John_Rating.Location = new Point(pb_John_Rating.Location.X - pb_John.Location.X, pb_John_Rating.Location.Y - pb_John.Location.Y);
+            pb_Mark_Rating.Parent = pb_Mark;
+            pb_Mark_Rating.Location = new Point(pb_Mark_Rating.Location.X - pb_Mark.Location.X, pb_Mark_Rating.Location.Y - pb_Mark.Location.Y);
+            pb_Ricky_Rating.Parent = pb_Ricky;
+            pb_Ricky_Rating.Location = new Point(pb_Ricky_Rating.Location.X - pb_Ricky.Location.X, pb_Ricky_Rating.Location.Y - pb_Ricky.Location.Y);
 
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
-
-            }
-            else
-            {
-                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Ricky");
-                feedbackForm.ShowDialog();
-            }
+            UpdateRatings();
+            timer1.Start();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void UpdateRatings()
         {
-            if (login.Username == "Cas")
-            {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
-
-            }
-            else
-            {
-                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Cas");
-                feedbackForm.ShowDialog();
-            }
+            PaintRating(pb_Cas_Rating, ratingLogic.getRating("Cas"));
+            PaintRating(pb_Dennis_Rating, ratingLogic.getRating("Dennis"));
+            PaintRating(pb_Jeroen_Rating, ratingLogic.getRating("Jeroen"));
+            PaintRating(pb_John_Rating, ratingLogic.getRating("John"));
+            PaintRating(pb_Mark_Rating, ratingLogic.getRating("Mark"));
+            PaintRating(pb_Ricky_Rating, ratingLogic.getRating("Ricky"));
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void PaintRating(PictureBox pb, string text)
         {
-            if (login.Username == "Jeroen")
+            pb.Paint += new PaintEventHandler((sender, e) =>
             {
+                e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+                SizeF textSize = e.Graphics.MeasureString(text, Font);
+                PointF locationToDraw = new PointF();
+                locationToDraw.X = (pb.Width / 2) - (textSize.Width / 2);
+                locationToDraw.Y = (pb.Height / 2) - (textSize.Height / 2);
 
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
-
-            }
-            else
-            {
-                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Jeroen");
-                feedbackForm.ShowDialog();
-            }
+                e.Graphics.DrawString(text, Font, Brushes.Black, locationToDraw);
+            });
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            if (login.Username == "Mark")
-            {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
-
-            }
-            else
-            {
-                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Mark");
-                feedbackForm.ShowDialog();
-            }
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            if (login.Username == "John")
-            {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
-
-            }
-            else
-            {
-                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "John");
-                feedbackForm.ShowDialog();
-            }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            if (login.Username == "Dennis")
-            {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
-
-            }
-            else
-            {
-                SMProofOfConcept.GiveFeedback feedbackForm = new GiveFeedback(login, "Dennis");
-                feedbackForm.ShowDialog();
-            }
-        }
-
 
         private void btn_askFeedback_Click(object sender, EventArgs e)
         {
@@ -155,7 +97,7 @@ namespace SMProofOfConcept
             WindowState = FormWindowState.Normal;
         }
 
-        private void tsmi_Afsluiten_Click(object sender, EventArgs e)
+        private void tsmi_Afsluiten_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -175,5 +117,122 @@ namespace SMProofOfConcept
             Hide();
         }
 
+        private void pb_Cas_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Cas")
+            {
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
+            }
+            else
+            {
+                GiveFeedback feedbackForm = new GiveFeedback(login, "Cas");
+                feedbackForm.ShowDialog();
+            }
+        }
+
+        private void pb_Dennis_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Dennis")
+            {
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
+            }
+            else
+            {
+                GiveFeedback feedbackForm = new GiveFeedback(login, "Dennis");
+                feedbackForm.ShowDialog();
+            }
+        }
+
+        private void pb_Jeroen_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Jeroen")
+            {
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
+            }
+            else
+            {
+                GiveFeedback feedbackForm = new GiveFeedback(login, "Jeroen");
+                feedbackForm.ShowDialog();
+            }
+        }
+
+        private void pb_John_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "John")
+            {
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
+            }
+            else
+            {
+                GiveFeedback feedbackForm = new GiveFeedback(login, "John");
+                feedbackForm.ShowDialog();
+            }
+        }
+
+        private void pb_Mark_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Mark")
+            {
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
+            }
+            else
+            {
+                GiveFeedback feedbackForm = new GiveFeedback(login, "Mark");
+                feedbackForm.ShowDialog();
+            }
+        }
+
+        private void pb_Ricky_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Ricky")
+            {
+
+                GetFeedback feedbackForm = new GetFeedback(login);
+                feedbackForm.ShowDialog();
+
+            }
+            else
+            {
+                GiveFeedback feedbackForm = new GiveFeedback(login, "Ricky");
+                feedbackForm.ShowDialog();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(feedbackLogic.DoPeopleWantFeedback())
+            {
+                DatabaseRequereFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback();
+                string message = "";
+                foreach(DatabaseRequereFeedback dbReqFb in dbRequireFb)
+                {
+                    message += dbReqFb.AskedFrom;
+                    message += " wil graag feedback in de categorie ";
+                    message += dbReqFb.Category;
+                    message += "\n";
+                }
+                feedbackLogic.DeleteRequireFeedback();
+                //MessageBox.Show(message);
+                //MessageBox.Show(message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
+                MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+
+            }
+        }
     }
 }

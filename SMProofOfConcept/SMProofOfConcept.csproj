@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Database\DatabaseConnection.cs" />
+    <Compile Include="Classes\Logic\FeedbackLogic.cs" />
     <Compile Include="Classes\Logic\RatingLogic.cs" />
     <Compile Include="Classes\Model\CategoryType.cs" />
     <Compile Include="Classes\Model\Names.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RequireFeedback.resx">
       <DependentUpon>RequireFeedback.cs</DependentUpon>
@@ -126,7 +128,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Image\" />
+    <None Include="Image\Dennis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Cas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Jeroen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\John.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Ricky.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

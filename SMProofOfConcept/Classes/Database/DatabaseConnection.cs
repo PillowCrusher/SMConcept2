@@ -79,7 +79,8 @@ namespace SMProofOfConcept.Classes.Database
             foreach (DatabaseRating r in dbRating)
             {
                 Enum.TryParse(r.Category, out type);
-                result.Add(new Rating(type, Convert.ToDouble(r.Rating), DateTime.Parse(r.DateTime)));
+                string convertedRating = r.Rating.Replace(".", ",");
+                result.Add(new Rating(type, Convert.ToDouble(convertedRating), DateTime.Parse(r.DateTime)));
             }
 
             return result;
