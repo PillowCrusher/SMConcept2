@@ -135,15 +135,45 @@ namespace SMProofOfConcept
         private void SelectToGiveFeedbackToForm_Resize(object sender, EventArgs e)
         {
             if (FormWindowState.Minimized == WindowState)
-                {
+            {
                 Hide();
-                }
+            }
         }
 
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
         {
+            if(e.Button == MouseButtons.Left)
+            {
+                Show();
+                WindowState = FormWindowState.Normal;
+            }          
+        }
+
+        private void tsmi_Open_Click(object sender, EventArgs e)
+        {
             Show();
             WindowState = FormWindowState.Normal;
         }
+
+        private void tsmi_Afsluiten_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            {
+                notifyIcon1.Dispose();
+                return;
+            }
+
+            e.Cancel = true;
+            WindowState = FormWindowState.Minimized;
+            Hide();
+        }
+
     }
 }

@@ -65,6 +65,7 @@ namespace SMProofOfConcept
 
         private void btn_Verwijder_Click(object sender, EventArgs e)
         {
+            if (lbx_Feedback.SelectedIndex == -1) return;
             DatabaseFeedback dbFeedback = (DatabaseFeedback)lbx_Feedback.SelectedItem;
             string query = "DELETE FROM SMFeedback WHERE SendTo = '";
             query += dbFeedback.SendTo + "' AND SendFrom = '";
