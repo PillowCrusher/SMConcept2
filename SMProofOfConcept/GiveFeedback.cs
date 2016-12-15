@@ -21,6 +21,7 @@ namespace SMProofOfConcept
             this.login = login;
             this.sendTo = sendTo;
             InitializeComponent();
+            lb_Name.Text = "Geef feedback aan " + sendTo;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

@@ -227,11 +227,8 @@ namespace SMProofOfConcept
                     message += "\n";
                 }
                 feedbackLogic.DeleteRequireFeedback();
-                //MessageBox.Show(message);
-                //MessageBox.Show(message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button2, MessageBoxOptions.DefaultDesktopOnly);
+
                 MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
-
-
             }
         }
     }
