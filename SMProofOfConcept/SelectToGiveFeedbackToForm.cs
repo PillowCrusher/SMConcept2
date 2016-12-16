@@ -335,7 +335,7 @@ namespace SMProofOfConcept
 
         private void tsmi_Profiel_Click(object sender, EventArgs e)
         {
-            Profile profileForm = new Profile(contextMenuName);
+            Profile profileForm = new Profile(login, contextMenuName);
             profileForm.ShowDialog();
         }
 

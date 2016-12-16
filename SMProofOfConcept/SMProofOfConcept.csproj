@@ -61,10 +61,12 @@
     </Compile>
     <Compile Include="Classes\Database\DatabaseConnection.cs" />
     <Compile Include="Classes\Logic\FeedbackLogic.cs" />
+    <Compile Include="Classes\Logic\ProfileLogic.cs" />
     <Compile Include="Classes\Logic\RatingLogic.cs" />
     <Compile Include="Classes\Model\CategoryType.cs" />
     <Compile Include="Classes\Model\Names.cs" />
     <Compile Include="Classes\Model\Rating.cs" />
+    <Compile Include="Classes\Model\Skills.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +105,12 @@
     <Compile Include="RequireFeedback.Designer.cs">
       <DependentUpon>RequireFeedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelecteerVaardigheden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelecteerVaardigheden.Designer.cs">
+      <DependentUpon>SelecteerVaardigheden.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectToGiveFeedbackToForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="RequireFeedback.resx">
       <DependentUpon>RequireFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelecteerVaardigheden.resx">
+      <DependentUpon>SelecteerVaardigheden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectToGiveFeedbackToForm.resx">
       <DependentUpon>SelectToGiveFeedbackToForm.cs</DependentUpon>
@@ -180,6 +191,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Image\Icons_ Skills\web.png" />
+    <None Include="Image\Icons_ Skills\UX.png" />
+    <None Include="Image\Icons_ Skills\research.png" />
+    <None Include="Image\Icons_ Skills\java.png" />
+    <None Include="Image\Icons_ Skills\database.png" />
+    <None Include="Image\Icons_ Skills\concepting.png" />
+    <None Include="Image\Icons_ Skills\C.png" />
+    <None Include="Image\Icons_ Skills\c#.png" />
     <None Include="Image\corcle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
