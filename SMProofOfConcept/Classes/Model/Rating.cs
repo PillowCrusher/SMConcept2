@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SMProofOfConcept.Classes.Model
 {
 
-   public class Rating
+   public class Rating : IComparable<Rating>
     {
         private DateTime dateTime;
         private CategoryType type;
@@ -30,5 +30,9 @@ namespace SMProofOfConcept.Classes.Model
             return type;
         }
 
+       public int CompareTo(Rating other)
+       {
+           return this.dateTime.CompareTo(other.dateTime);
+       }
     }
 }
