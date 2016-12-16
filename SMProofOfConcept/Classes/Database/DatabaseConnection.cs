@@ -85,8 +85,26 @@ namespace SMProofOfConcept.Classes.Database
 
             return result;
         }
+        public bool dbCheckConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    using (var stream = client.OpenRead("http://www.google.com"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
     }
+
 
     public class DatabaseRating
     {

@@ -21,7 +21,7 @@ namespace SMProofOfConcept
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            if(tb_Username.Text == "" || tb_Password.Text == "")
+            if (tb_Username.Text == "" || tb_Password.Text == "")
             {
                 MessageBox.Show("Everything needs to be filled in");
                 return;
@@ -32,23 +32,32 @@ namespace SMProofOfConcept
             query += tb_Password.Text + "'";
 
             DatabaseConnection dbCon = new DatabaseConnection();
-            string jsonString = dbCon.sendQuery(query);
-            DatabaseLogin[] dbLogin = JsonConvert.DeserializeObject<DatabaseLogin[]>(jsonString);
-
-            if(dbLogin.Count() == 1)
+            if (dbCon.dbCheckConnection() == true)
             {
-                //Login succesfull  
-                SelectToGiveFeedbackToForm form = new SelectToGiveFeedbackToForm(dbLogin[0]);
-                
-                Hide();
-                form.Closed += (s, args) => Close();
-                form.Show();
+                string jsonString = dbCon.sendQuery(query);
+                DatabaseLogin[] dbLogin = JsonConvert.DeserializeObject<DatabaseLogin[]>(jsonString);
+                if (dbLogin.Count() == 1)
+                {
+                    //Login succesfull  
+                    SelectToGiveFeedbackToForm form = new SelectToGiveFeedbackToForm(dbLogin[0]);
+
+                    Hide();
+                    form.Closed += (s, args) => Close();
+                    form.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong username or password");
+                }
             }
             else
             {
-                MessageBox.Show("Wrong username or password");
+                MessageBox.Show("please check your internet connection");
             }
         }
+       
+            
+        
 
     }
 
