@@ -340,44 +340,92 @@ namespace SMProofOfConcept
 
         private void pb_Cas_Rating_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Cas") return;
-            AddRating addRatingFrom = new AddRating(login, "Cas");
-            addRatingFrom.ShowDialog();
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                if (login.Username == "Cas") return;
+                AddRating addRatingFrom = new AddRating(login, "Cas");
+                addRatingFrom.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("please check your internet connection");
+            }
         }
 
         private void pb_Dennis_Rating_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Dennis") return;
-            AddRating addRatingFrom = new AddRating(login, "Dennis");
-            addRatingFrom.ShowDialog();
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                if (login.Username == "Dennis") return;
+                AddRating addRatingFrom = new AddRating(login, "Dennis");
+                addRatingFrom.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("please check your internet connection");
+            }
         }
 
         private void pb_Jeroen_Rating_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Jeroen") return;
-            AddRating addRatingFrom = new AddRating(login, "Jeroen");
-            addRatingFrom.ShowDialog();
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                if (login.Username == "Jeroen") return;
+                AddRating addRatingFrom = new AddRating(login, "Jeroen");
+                addRatingFrom.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("please check your internet connection");
+            }
         }
 
         private void pb_John_Rating_Click(object sender, EventArgs e)
         {
-            if (login.Username == "John") return;
-            AddRating addRatingFrom = new AddRating(login, "John");
-            addRatingFrom.ShowDialog();
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                if (login.Username == "John") return;
+                AddRating addRatingFrom = new AddRating(login, "John");
+                addRatingFrom.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("please check your internet connection");
+            }
         }
 
         private void pb_Mark_Rating_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Mark") return;
-            AddRating addRatingFrom = new AddRating(login, "Mark");
-            addRatingFrom.ShowDialog();
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                if (login.Username == "Mark") return;
+                AddRating addRatingFrom = new AddRating(login, "Mark");
+                addRatingFrom.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("please check your ineternet connection");
+            }
         }
 
         private void pb_Ricky_Rating_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Ricky") return;
-            AddRating addRatingFrom = new AddRating(login, "Ricky");
-            addRatingFrom.ShowDialog();
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                if (login.Username == "Ricky") return;
+                AddRating addRatingFrom = new AddRating(login, "Ricky");
+                addRatingFrom.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("please check your internet connection");
+            }
         }
 
         private void tsmi_Log_Uit_Click(object sender, EventArgs e)

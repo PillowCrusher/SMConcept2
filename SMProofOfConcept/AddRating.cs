@@ -30,15 +30,23 @@ namespace SMProofOfConcept
 
         private void btn_Geef_Rating_Click(object sender, EventArgs e)
         {
-            List<DatabaseRating> ratings = GetRatings();
-            if (ratings.Count == 0)
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
             {
-                MessageBox.Show("Geef tenminste op 1 categorie feedback");
-                return;
-            }
-            feedbackLogic.SendRatings(GetRatings());
+                List<DatabaseRating> ratings = GetRatings();
+                if (ratings.Count == 0)
+                {
+                    MessageBox.Show("Geef tenminste op 1 categorie feedback");
+                    return;
+                }
+                feedbackLogic.SendRatings(GetRatings());
 
-            Close();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("please check your internet connection");
+            }
         }
 
         private List<DatabaseRating> GetRatings()
