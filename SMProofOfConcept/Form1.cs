@@ -41,7 +41,9 @@ namespace SMProofOfConcept
                 DatabaseLogin[] dbLogin = JsonConvert.DeserializeObject<DatabaseLogin[]>(jsonString);
                 if (dbLogin.Count() == 1)
                 {
-                    //Login succesfull  
+                    //Login succesfull
+                    tb_Username.Text = "";
+                    tb_Password.Text = "";  
                     SelectToGiveFeedbackToForm form = new SelectToGiveFeedbackToForm(dbLogin[0], this);
 
                     Hide();
