@@ -44,46 +44,54 @@ namespace SMProofOfConcept
             CategoryType cat;
             string Query;
             DatabaseConnection db = new DatabaseConnection();
-            if (rdb_Concepten.Checked == true)
+
+            if (db.dbCheckConnection() == true)
             {
-                cat = CategoryType.Concepten;
-            }
-            else if(rdb_Inzet.Checked == true)
-            {
-                cat = CategoryType.Inzet;
-            }
-            else if(rdb_Programmeren.Checked == true)
-            {
-                cat = CategoryType.Programmeren;
-            }
-            else if(rdb_Research.Checked == true)
-            {
-                cat = CategoryType.Onderzoek;
-            }
-            else if(rdb_Samenwerken.Checked == true)
-            {
-                cat = CategoryType.Samenwerken;
+                if (rdb_Concepten.Checked == true)
+                {
+                    cat = CategoryType.Concepten;
+                }
+                else if (rdb_Inzet.Checked == true)
+                {
+                    cat = CategoryType.Inzet;
+                }
+                else if (rdb_Programmeren.Checked == true)
+                {
+                    cat = CategoryType.Programmeren;
+                }
+                else if (rdb_Research.Checked == true)
+                {
+                    cat = CategoryType.Onderzoek;
+                }
+                else if (rdb_Samenwerken.Checked == true)
+                {
+                    cat = CategoryType.Samenwerken;
+                }
+                else
+                {
+                    //default
+                    cat = CategoryType.Inzet;
+                }
+                String feedbacktext = textBox1.Text;
+                // SMFeedback
+                // SendTo 
+                // SendFrom
+                // FeedBack
+                // Category
+                // DateTime
+                Query = "INSERT INTO SMFeedback (FeedbackId,SendTo, SendFrom,FeedBack,Category,DateTime) VALUES(NULL, '";
+                Query += sendTo + "','";
+                Query += login.Username + "','";
+                Query += feedbacktext + "','";
+                Query += cat.ToString() + "','";
+                Query += DateTime.Now.ToString() + "')";
+                db.sendQuery(Query);
+                Close();
             }
             else
             {
-                //default
-                cat = CategoryType.Inzet;
+                MessageBox.Show("please check your internet connection");
             }
-            String feedbacktext = textBox1.Text;
-            // SMFeedback
-            // SendTo 
-            // SendFrom
-            // FeedBack
-            // Category
-            // DateTime
-            Query = "INSERT INTO SMFeedback (FeedbackId,SendTo, SendFrom,FeedBack,Category,DateTime) VALUES(NULL, '";
-            Query += sendTo + "','";
-            Query += login.Username + "','";
-            Query += feedbacktext + "','";
-            Query += cat.ToString() + "','";
-            Query += DateTime.Now.ToString() + "')";
-            db.sendQuery(Query);
-            Close();
         }
     }
 }

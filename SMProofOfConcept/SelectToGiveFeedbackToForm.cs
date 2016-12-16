@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SMProofOfConcept.Classes.Logic;
+using SMProofOfConcept.Classes.Database;
 
 namespace SMProofOfConcept
 {
@@ -73,8 +74,16 @@ namespace SMProofOfConcept
 
         private void btn_askFeedback_Click(object sender, EventArgs e)
         {
-            RequireFeedback requireFeedbackForm = new RequireFeedback(login);
-            requireFeedbackForm.ShowDialog();
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                RequireFeedback requireFeedbackForm = new RequireFeedback(login);
+                requireFeedbackForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("please check your internet connection");
+            }
         }
 
         private void SelectToGiveFeedbackToForm_Resize(object sender, EventArgs e)
@@ -125,15 +134,30 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Cas")
             {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GetFeedback feedbackForm = new GetFeedback(login);
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("check internet connection");
+                }
 
             }
             else
             {
-                GiveFeedback feedbackForm = new GiveFeedback(login, "Cas");
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GiveFeedback feedbackForm = new GiveFeedback(login, "Cas");
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
             }
         }
 
@@ -141,15 +165,30 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Dennis")
             {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GetFeedback feedbackForm = new GetFeedback(login);
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
 
             }
             else
             {
-                GiveFeedback feedbackForm = new GiveFeedback(login, "Dennis");
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GiveFeedback feedbackForm = new GiveFeedback(login, "Dennis");
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
             }
         }
 
@@ -157,15 +196,30 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Jeroen")
             {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GetFeedback feedbackForm = new GetFeedback(login);
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
 
             }
             else
             {
-                GiveFeedback feedbackForm = new GiveFeedback(login, "Jeroen");
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GiveFeedback feedbackForm = new GiveFeedback(login, "Jeroen");
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
             }
         }
 
@@ -173,15 +227,29 @@ namespace SMProofOfConcept
         {
             if (login.Username == "John")
             {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
-
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GetFeedback feedbackForm = new GetFeedback(login);
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
             }
             else
             {
-                GiveFeedback feedbackForm = new GiveFeedback(login, "John");
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GiveFeedback feedbackForm = new GiveFeedback(login, "John");
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
             }
         }
 
@@ -189,15 +257,30 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Mark")
             {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GetFeedback feedbackForm = new GetFeedback(login);
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
 
             }
             else
             {
-                GiveFeedback feedbackForm = new GiveFeedback(login, "Mark");
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GiveFeedback feedbackForm = new GiveFeedback(login, "Mark");
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
             }
         }
 
@@ -205,34 +288,53 @@ namespace SMProofOfConcept
         {
             if (login.Username == "Ricky")
             {
-
-                GetFeedback feedbackForm = new GetFeedback(login);
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GetFeedback feedbackForm = new GetFeedback(login);
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
 
             }
             else
             {
-                GiveFeedback feedbackForm = new GiveFeedback(login, "Ricky");
-                feedbackForm.ShowDialog();
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GiveFeedback feedbackForm = new GiveFeedback(login, "Ricky");
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(feedbackLogic.DoPeopleWantFeedback())
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
             {
-                DatabaseRequereFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback();
-                string message = "";
-                foreach(DatabaseRequereFeedback dbReqFb in dbRequireFb)
+                if (feedbackLogic.DoPeopleWantFeedback())
                 {
-                    message += dbReqFb.AskedFrom;
-                    message += " wil graag feedback in de categorie ";
-                    message += dbReqFb.Category;
-                    message += "\n";
-                }
-                feedbackLogic.DeleteRequireFeedback();
+                    DatabaseRequereFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback();
+                    string message = "";
+                    foreach (DatabaseRequereFeedback dbReqFb in dbRequireFb)
+                    {
+                        message += dbReqFb.AskedFrom;
+                        message += " wil graag feedback in de categorie ";
+                        message += dbReqFb.Category;
+                        message += "\n";
+                    }
+                    feedbackLogic.DeleteRequireFeedback();
 
-                MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
+                }
             }
         }
 
