@@ -18,6 +18,7 @@ namespace SMProofOfConcept
         private RatingLogic ratingLogic;
         private FeedbackLogic feedbackLogic;
         private Form1 loginForm;
+        private string contextMenuName = "";
 
         public SelectToGiveFeedbackToForm(DatabaseLogin login, Form1 loginForm)
         {
@@ -132,210 +133,103 @@ namespace SMProofOfConcept
 
         private void pb_Cas_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Cas")
-            {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GetFeedback feedbackForm = new GetFeedback(login);
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("check internet connection");
-                }
+            contextMenuName = "Cas";
 
+            if(login.Username == contextMenuName)
+            {
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GiveFeedback feedbackForm = new GiveFeedback(login, "Cas");
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_Dennis_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Dennis")
-            {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GetFeedback feedbackForm = new GetFeedback(login);
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+            contextMenuName = "Dennis";
 
+            if (login.Username == contextMenuName)
+            {
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GiveFeedback feedbackForm = new GiveFeedback(login, "Dennis");
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_Jeroen_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Jeroen")
-            {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GetFeedback feedbackForm = new GetFeedback(login);
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+            contextMenuName = "Jeroen";
 
+            if (login.Username == contextMenuName)
+            {
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GiveFeedback feedbackForm = new GiveFeedback(login, "Jeroen");
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_John_Click(object sender, EventArgs e)
         {
-            if (login.Username == "John")
+            contextMenuName = "John";
+
+            if (login.Username == contextMenuName)
             {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GetFeedback feedbackForm = new GetFeedback(login);
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GiveFeedback feedbackForm = new GiveFeedback(login, "John");
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_Mark_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Mark")
-            {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GetFeedback feedbackForm = new GetFeedback(login);
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+            contextMenuName = "Mark";
 
+            if (login.Username == contextMenuName)
+            {
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GiveFeedback feedbackForm = new GiveFeedback(login, "Mark");
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_Ricky_Click(object sender, EventArgs e)
         {
-            if (login.Username == "Ricky")
-            {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GetFeedback feedbackForm = new GetFeedback(login);
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+            contextMenuName = "Ricky";
 
+            if (login.Username == contextMenuName)
+            {
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                DatabaseConnection dbCon = new DatabaseConnection();
-                if (dbCon.dbCheckConnection() == true)
-                {
-                    GiveFeedback feedbackForm = new GiveFeedback(login, "Ricky");
-                    feedbackForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("please check your internet connection");
-                }
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
-            if (dbCon.dbCheckConnection() == true)
-            {
-                if (feedbackLogic.DoPeopleWantFeedback())
-                {
-                    DatabaseRequereFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback();
-                    string message = "";
-                    foreach (DatabaseRequereFeedback dbReqFb in dbRequireFb)
-                    {
-                        message += dbReqFb.AskedFrom;
-                        message += " wil graag feedback in de categorie ";
-                        message += dbReqFb.Category;
-                        message += "\n";
-                    }
-                    feedbackLogic.DeleteRequireFeedback();
-
-                    MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
-                }
-            }
+            RefreshRequireFeedback();
         }
 
         private void pb_Cas_Rating_Click(object sender, EventArgs e)
@@ -436,6 +330,70 @@ namespace SMProofOfConcept
             notifyIcon1.Dispose();
 
             this.Close();
+        }
+
+        private void tsmi_Profiel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmi_Geef_Feedback_Click(object sender, EventArgs e)
+        {
+            if (login.Username == contextMenuName)
+            {
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GetFeedback feedbackForm = new GetFeedback(login);
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("check internet connection");
+                }
+
+            }
+            else
+            {
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    GiveFeedback feedbackForm = new GiveFeedback(login, contextMenuName);
+                    feedbackForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
+            }
+        }
+
+        private void tsmi_Ververs_Click(object sender, EventArgs e)
+        {
+            RefreshRequireFeedback();
+        }
+
+        private void RefreshRequireFeedback()
+        {
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                if (feedbackLogic.DoPeopleWantFeedback())
+                {
+                    DatabaseRequereFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback();
+                    string message = "";
+                    foreach (DatabaseRequereFeedback dbReqFb in dbRequireFb)
+                    {
+                        message += dbReqFb.AskedFrom;
+                        message += " wil graag feedback in de categorie ";
+                        message += dbReqFb.Category;
+                        message += "\n";
+                    }
+                    feedbackLogic.DeleteRequireFeedback();
+
+                    MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
+                }
+            }
         }
     }
 }
