@@ -186,6 +186,7 @@
             this.pb_Cas_Rating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_Cas_Rating.TabIndex = 13;
             this.pb_Cas_Rating.TabStop = false;
+            this.pb_Cas_Rating.Click += new System.EventHandler(this.pb_Cas_Rating_Click);
             // 
             // pb_Dennis_Rating
             // 
@@ -197,6 +198,7 @@
             this.pb_Dennis_Rating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_Dennis_Rating.TabIndex = 14;
             this.pb_Dennis_Rating.TabStop = false;
+            this.pb_Dennis_Rating.Click += new System.EventHandler(this.pb_Dennis_Rating_Click);
             // 
             // pb_Jeroen_Rating
             // 
@@ -208,6 +210,7 @@
             this.pb_Jeroen_Rating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_Jeroen_Rating.TabIndex = 15;
             this.pb_Jeroen_Rating.TabStop = false;
+            this.pb_Jeroen_Rating.Click += new System.EventHandler(this.pb_Jeroen_Rating_Click);
             // 
             // pb_John_Rating
             // 
@@ -219,6 +222,7 @@
             this.pb_John_Rating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_John_Rating.TabIndex = 16;
             this.pb_John_Rating.TabStop = false;
+            this.pb_John_Rating.Click += new System.EventHandler(this.pb_John_Rating_Click);
             // 
             // pb_Mark_Rating
             // 
@@ -230,6 +234,7 @@
             this.pb_Mark_Rating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_Mark_Rating.TabIndex = 17;
             this.pb_Mark_Rating.TabStop = false;
+            this.pb_Mark_Rating.Click += new System.EventHandler(this.pb_Mark_Rating_Click);
             // 
             // pb_Ricky_Rating
             // 
@@ -241,6 +246,7 @@
             this.pb_Ricky_Rating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pb_Ricky_Rating.TabIndex = 18;
             this.pb_Ricky_Rating.TabStop = false;
+            this.pb_Ricky_Rating.Click += new System.EventHandler(this.pb_Ricky_Rating_Click);
             // 
             // timer1
             // 

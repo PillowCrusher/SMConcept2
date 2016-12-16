@@ -51,6 +51,28 @@ namespace SMProofOfConcept.Classes.Logic
             query += login.Username + "'";
             dbCon.sendQuery(query);
         }
+
+        public void SendRatings(List<DatabaseRating> ratings)
+        {
+            int countdown = ratings.Count;
+            string query = "INSERT INTO SMRatings (RatingId, Name, Rating, Category, DateTime) VALUES (";
+
+            foreach (DatabaseRating rating in ratings)
+            {
+                countdown--;
+                if (countdown == 0)
+                {
+                    query += "NULL, '" + rating.Name + "', '" + rating.Rating + "', '" + rating.Category + "', '" +
+                        DateTime.Now.ToString() + "')";
+                }
+                else
+                {
+                    query += "NULL, '" + rating.Name + "', '" + rating.Rating + "', '" + rating.Category + "', '" +
+                        DateTime.Now.ToString() + "'), (";
+                }
+            }
+            dbCon.sendQuery(query);
+        }
     }
 
     public class DatabaseRequereFeedback

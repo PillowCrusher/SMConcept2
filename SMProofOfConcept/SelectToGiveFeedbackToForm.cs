@@ -231,5 +231,47 @@ namespace SMProofOfConcept
                 MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
         }
+
+        private void pb_Cas_Rating_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Cas") return;
+            AddRating addRatingFrom = new AddRating(login, "Cas");
+            addRatingFrom.ShowDialog();
+        }
+
+        private void pb_Dennis_Rating_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Dennis") return;
+            AddRating addRatingFrom = new AddRating(login, "Dennis");
+            addRatingFrom.ShowDialog();
+        }
+
+        private void pb_Jeroen_Rating_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Jeroen") return;
+            AddRating addRatingFrom = new AddRating(login, "Jeroen");
+            addRatingFrom.ShowDialog();
+        }
+
+        private void pb_John_Rating_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "John") return;
+            AddRating addRatingFrom = new AddRating(login, "John");
+            addRatingFrom.ShowDialog();
+        }
+
+        private void pb_Mark_Rating_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Mark") return;
+            AddRating addRatingFrom = new AddRating(login, "Mark");
+            addRatingFrom.ShowDialog();
+        }
+
+        private void pb_Ricky_Rating_Click(object sender, EventArgs e)
+        {
+            if (login.Username == "Ricky") return;
+            AddRating addRatingFrom = new AddRating(login, "Ricky");
+            addRatingFrom.ShowDialog();
+        }
     }
 }

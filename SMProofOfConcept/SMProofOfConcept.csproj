@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRating.Designer.cs">
+      <DependentUpon>AddRating.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Database\DatabaseConnection.cs" />
     <Compile Include="Classes\Logic\FeedbackLogic.cs" />
     <Compile Include="Classes\Logic\RatingLogic.cs" />
@@ -90,6 +96,9 @@
     <Compile Include="SelectToGiveFeedbackToForm.Designer.cs">
       <DependentUpon>SelectToGiveFeedbackToForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddRating.resx">
+      <DependentUpon>AddRating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
