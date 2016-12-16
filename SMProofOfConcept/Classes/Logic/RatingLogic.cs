@@ -37,5 +37,34 @@ namespace SMProofOfConcept.Classes.Logic
 
             return b;
         }
+
+        public string getRating(string name, CategoryType category)
+        {
+            RefreshRating(dbConnection.sendRatingQuery("SELECT * FROM SMRatings WHERE Name = '" + name + "' AND Category = '" + category.ToString() + "'" ));
+
+            if (_ratingList.Count == 0) return "";
+
+            double avgRating = 0;
+            List<Rating> avgRatings = new List<Rating>();
+            foreach (Rating rating in _ratingList)
+            {
+                if (rating.getCategoryType() == category)
+                {
+                    avgRatings.Add(rating);
+                }
+            }
+
+            if (avgRatings.Count == 0) return  "";
+
+            foreach (Rating tempRating in avgRatings)
+            {
+                avgRating += tempRating.getRating();
+            }
+
+            avgRating = avgRating / avgRatings.Count;
+            avgRating = Math.Round(avgRating, 2);            
+            return Convert.ToString(avgRating);
+
+        }
     }
 }

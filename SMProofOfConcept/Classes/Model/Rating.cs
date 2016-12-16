@@ -20,10 +20,15 @@ namespace SMProofOfConcept.Classes.Model
             this.dateTime = dateTime;
         }
 
-       public double getRating()
-       {
-           return v;
-       }
+        public double getRating()
+        {
+            return v;
+        }
+
+        public CategoryType getCategoryType()
+        {
+            return type;
+        }
 
     }
 }

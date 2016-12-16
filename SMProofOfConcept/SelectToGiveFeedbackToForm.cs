@@ -64,6 +64,7 @@ namespace SMProofOfConcept
             pb.Paint += new PaintEventHandler((sender, e) =>
             {
                 e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+
                 SizeF textSize = e.Graphics.MeasureString(text, Font);
                 PointF locationToDraw = new PointF();
                 locationToDraw.X = (pb.Width / 2) - (textSize.Width / 2);
@@ -334,7 +335,8 @@ namespace SMProofOfConcept
 
         private void tsmi_Profiel_Click(object sender, EventArgs e)
         {
-
+            Profile profileForm = new Profile(contextMenuName);
+            profileForm.ShowDialog();
         }
 
         private void tsmi_Geef_Feedback_Click(object sender, EventArgs e)
