@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using Newtonsoft.Json;
 using SMProofOfConcept.Classes.Model;
+using System.Globalization;
 
 namespace SMProofOfConcept.Classes.Database
 { 
@@ -79,7 +80,15 @@ namespace SMProofOfConcept.Classes.Database
             foreach (DatabaseRating r in dbRating)
             {
                 Enum.TryParse(r.Category, out type);
-                string convertedRating = r.Rating.Replace(".", ",");
+                string convertedRating;
+                // convert voor het geval user een nederlands keyboard layout gebruikt.
+                CultureInfo ci = CultureInfo.InstalledUICulture;
+                if (ci.Name == "nl-NL") {
+                   convertedRating = r.Rating.Replace(".", ",");
+                }
+                else {
+                   convertedRating = r.Rating.Replace(",", ".");
+                }
                 result.Add(new Rating(type, Convert.ToDouble(convertedRating), DateTime.Parse(r.DateTime)));
             }
 
