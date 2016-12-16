@@ -16,13 +16,16 @@ namespace SMProofOfConcept
         private DatabaseLogin login;
         private RatingLogic ratingLogic;
         private FeedbackLogic feedbackLogic;
-        public SelectToGiveFeedbackToForm(DatabaseLogin login)
+        private Form1 loginForm;
+
+        public SelectToGiveFeedbackToForm(DatabaseLogin login, Form1 loginForm)
         {
             InitializeComponent();
             this.login = login;
             ratingLogic = new RatingLogic();
             feedbackLogic = new FeedbackLogic(login);
             InitializeScreen();
+            this.loginForm = loginForm;
         }
 
         private void InitializeScreen()
@@ -111,6 +114,7 @@ namespace SMProofOfConcept
                 notifyIcon1.Dispose();
                 return;
             }
+            
 
             e.Cancel = true;
             WindowState = FormWindowState.Minimized;
@@ -272,6 +276,16 @@ namespace SMProofOfConcept
             if (login.Username == "Ricky") return;
             AddRating addRatingFrom = new AddRating(login, "Ricky");
             addRatingFrom.ShowDialog();
+        }
+
+        private void tsmi_Log_Uit_Click(object sender, EventArgs e)
+        {
+            loginForm.PeopleForm = this;        
+            loginForm.Closed += (s, args) => Close();
+            loginForm.Show();
+            notifyIcon1.Dispose();
+
+            this.Close();
         }
     }
 }

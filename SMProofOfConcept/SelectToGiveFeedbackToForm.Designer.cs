@@ -48,6 +48,7 @@
             this.pb_Mark_Rating = new System.Windows.Forms.PictureBox();
             this.pb_Ricky_Rating = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tsmi_Log_Uit = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Dennis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Jeroen)).BeginInit();
@@ -86,21 +87,22 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmi_Open,
+            this.tsmi_Log_Uit,
             this.tsmi_Afsluiten});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(122, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
             // 
             // tsmi_Open
             // 
             this.tsmi_Open.Name = "tsmi_Open";
-            this.tsmi_Open.Size = new System.Drawing.Size(121, 22);
+            this.tsmi_Open.Size = new System.Drawing.Size(152, 22);
             this.tsmi_Open.Text = "Open";
             this.tsmi_Open.Click += new System.EventHandler(this.tsmi_Open_Click);
             // 
             // tsmi_Afsluiten
             // 
             this.tsmi_Afsluiten.Name = "tsmi_Afsluiten";
-            this.tsmi_Afsluiten.Size = new System.Drawing.Size(121, 22);
+            this.tsmi_Afsluiten.Size = new System.Drawing.Size(152, 22);
             this.tsmi_Afsluiten.Text = "Afsluiten";
             this.tsmi_Afsluiten.Click += new System.EventHandler(this.tsmi_Afsluiten_Click_1);
             // 
@@ -253,6 +255,13 @@
             this.timer1.Interval = 300000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // tsmi_Log_Uit
+            // 
+            this.tsmi_Log_Uit.Name = "tsmi_Log_Uit";
+            this.tsmi_Log_Uit.Size = new System.Drawing.Size(152, 22);
+            this.tsmi_Log_Uit.Text = "Log uit";
+            this.tsmi_Log_Uit.Click += new System.EventHandler(this.tsmi_Log_Uit_Click);
+            // 
             // SelectToGiveFeedbackToForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,5 +325,6 @@
         private System.Windows.Forms.PictureBox pb_Mark_Rating;
         private System.Windows.Forms.PictureBox pb_Ricky_Rating;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_Log_Uit;
     }
 }
