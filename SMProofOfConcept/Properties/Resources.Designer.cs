@@ -63,6 +63,16 @@ namespace SMProofOfConcept.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blauw_vierkant {
+            get {
+                object obj = ResourceManager.GetObject("Blauw-vierkant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap C {
             get {
                 object obj = ResourceManager.GetObject("C", resourceCulture);
@@ -176,6 +186,16 @@ namespace SMProofOfConcept.Properties {
         internal static System.Drawing.Bitmap Mark {
             get {
                 object obj = ResourceManager.GetObject("Mark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Paars_vierkant {
+            get {
+                object obj = ResourceManager.GetObject("Paars-vierkant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -191,6 +191,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Image\Paars-vierkant.png" />
+    <None Include="Image\Blauw-vierkant.png" />
     <None Include="Image\Icons_ Skills\web.png" />
     <None Include="Image\Icons_ Skills\UX.png" />
     <None Include="Image\Icons_ Skills\research.png" />

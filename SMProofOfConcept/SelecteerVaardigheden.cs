@@ -28,14 +28,15 @@ namespace SMProofOfConcept
 
         private void InitializeScreen()
         {
-            pb_Check_C.Parent = pb_C;
-            pb_Check_C.Location = new Point(pb_Check_C.Location.X - pb_C.Location.X, pb_Check_C.Location.Y - pb_C.Location.Y);
-            pb_Check_C.Visible = false;
-
-            pb_Check_Csharp.Parent = pb_csharp;
-            pb_Check_Csharp.Location = new Point(pb_Check_Csharp.Location.X - pb_csharp.Location.X, pb_Check_Csharp.Location.Y - pb_csharp.Location.Y);
-            pb_Check_Csharp.Visible = false;
-
+            SetCheckLocationAndVisability(pb_C, pb_Check_C);
+            SetCheckLocationAndVisability(pb_csharp, pb_Check_Csharp);
+            SetCheckLocationAndVisability(pb_Java, pb_Check_Java);
+            SetCheckLocationAndVisability(pb_Web, pb_Check_Web);
+            SetCheckLocationAndVisability(pb_Concepting, pb_Check_Concepting);
+            SetCheckLocationAndVisability(pb_Database, pb_Check_Database);
+            SetCheckLocationAndVisability(pb_Research, pb_Check_Research);
+            SetCheckLocationAndVisability(pb_UI, pb_Check_UI);
+            
             InitializeChecks();
         }
 
@@ -43,8 +44,7 @@ namespace SMProofOfConcept
         {
             Skill skill;
             foreach(DatabaseSkill dbskill in dbSkills)
-            {
-                
+            {           
                 Enum.TryParse(dbskill.Skill, out skill);
                 switch (skill)
                 {
@@ -54,13 +54,38 @@ namespace SMProofOfConcept
                     case Skill.CSharp:
                         pb_Check_Csharp.Visible = true;
                         break;
+                    case Skill.Java:
+                        pb_Check_Java.Visible = true;
+                        break;
+                    case Skill.Web:
+                        pb_Check_Web.Visible = true;
+                        break;
+                    case Skill.Concept:
+                        pb_Check_Concepting.Visible = true;
+                        break;
+                    case Skill.Database:
+                        pb_Check_Database.Visible = true;
+                        break;
+                    case Skill.Research:
+                        pb_Check_Research.Visible = true;
+                        break;
+                    case Skill.UI:
+                        pb_Check_UI.Visible = true;
+                        break;
                 }
             }
         }
 
+        private void SetCheckLocationAndVisability(PictureBox parent, PictureBox check)
+        {
+            check.Parent = parent;
+            check.Location = new Point(check.Location.X - parent.Location.X, check.Location.Y - parent.Location.Y);
+            check.Visible = false;
+        }
+
         private void HandlePictureBoxClick(PictureBox pbCheck, Skill skill)
         {
-            if (dbSkills.Count == 5)
+            if (dbSkills.Count == 5 && pbCheck.Visible == false)
             {
                 MessageBox.Show("Je kunt maximaal 5 vaardigheden selecteren");
                 return;
@@ -103,32 +128,38 @@ namespace SMProofOfConcept
 
         private void pb_Java_Click(object sender, EventArgs e)
         {
-
+            HandlePictureBoxClick(pb_Check_Java, Skill.Java);
         }
 
         private void pb_Web_Click(object sender, EventArgs e)
         {
-
+            HandlePictureBoxClick(pb_Check_Web, Skill.Web);
         }
 
         private void pb_Concepting_Click(object sender, EventArgs e)
         {
-
+            HandlePictureBoxClick(pb_Check_Concepting, Skill.Concept);
         }
 
         private void pb_Database_Click(object sender, EventArgs e)
         {
-
+            HandlePictureBoxClick(pb_Check_Database, Skill.Database);
         }
 
         private void pb_Research_Click(object sender, EventArgs e)
         {
-
+            HandlePictureBoxClick(pb_Check_Research, Skill.Research);
         }
 
         private void pb_UI_Click(object sender, EventArgs e)
         {
+            HandlePictureBoxClick(pb_Check_UI, Skill.UI);
+        }
 
+        private void btn_Opslaan_Click(object sender, EventArgs e)
+        {
+            profileLogic.SafeSkills(dbSkills, name);
+            Close();
         }
     }
 }

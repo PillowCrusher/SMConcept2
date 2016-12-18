@@ -24,6 +24,41 @@ namespace SMProofOfConcept.Classes.Logic
             string jsonString = dbCon.sendQuery(query);
             return JsonConvert.DeserializeObject<DatabaseSkill[]>(jsonString);
         }
+
+        public void SafeSkills(List<DatabaseSkill> skills, string name)
+        {
+            RemoveSkills(name);
+
+            string query = "INSERT INTO SMSkills (SkillId, Name, Skill) VALUES (NULL, '";
+            bool isFirst = true;
+
+            foreach(DatabaseSkill skill in skills)
+            {
+                if(isFirst)
+                {
+                    query += name + "', '";
+                    query += skill.Skill.ToString() + "')";
+                    isFirst = false;
+                }
+                else
+                {
+                    query += ", (NULL, '";
+                    query += name + "', '";
+                    query += skill.Skill.ToString() + "')";
+                }
+            }
+
+            dbCon.sendQuery(query);
+
+        }
+
+        private void RemoveSkills(string name)
+        {
+            string query = "DELETE FROM SMSkills WHERE Name = '";
+            query += name + "'";
+            dbCon.sendQuery(query);
+        }
+
     }
 
     public class DatabaseSkill

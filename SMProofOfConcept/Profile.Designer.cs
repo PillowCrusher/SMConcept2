@@ -37,16 +37,16 @@
             this.btn_Statistieken = new System.Windows.Forms.Button();
             this.btn_Verantwoordelijkheden = new System.Windows.Forms.Button();
             this.btn_Vaardigheden = new System.Windows.Forms.Button();
-            this.pb_Vaardigheid_4 = new System.Windows.Forms.PictureBox();
-            this.pb_Vaardigheid_2 = new System.Windows.Forms.PictureBox();
-            this.pb_Vaardigheid_3 = new System.Windows.Forms.PictureBox();
-            this.pb_Vaardigheid_5 = new System.Windows.Forms.PictureBox();
-            this.pb_Vaardigheid_1 = new System.Windows.Forms.PictureBox();
-            this.pb_Verantwoordelijkheid_2 = new System.Windows.Forms.PictureBox();
             this.pb_Verantwoordelijkheid_4 = new System.Windows.Forms.PictureBox();
-            this.pb_Verantwoordelijkheid_5 = new System.Windows.Forms.PictureBox();
+            this.pb_Verantwoordelijkheid_2 = new System.Windows.Forms.PictureBox();
             this.pb_Verantwoordelijkheid_3 = new System.Windows.Forms.PictureBox();
+            this.pb_Verantwoordelijkheid_5 = new System.Windows.Forms.PictureBox();
             this.pb_Verantwoordelijkheid_1 = new System.Windows.Forms.PictureBox();
+            this.pb_Vaardigheid_2 = new System.Windows.Forms.PictureBox();
+            this.pb_Vaardigheid_4 = new System.Windows.Forms.PictureBox();
+            this.pb_Vaardigheid_5 = new System.Windows.Forms.PictureBox();
+            this.pb_Vaardigheid_3 = new System.Windows.Forms.PictureBox();
+            this.pb_Vaardigheid_1 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pb_Onderzoeken = new System.Windows.Forms.PictureBox();
             this.pb_Concepting = new System.Windows.Forms.PictureBox();
@@ -54,16 +54,16 @@
             this.pb_Samenwerking = new System.Windows.Forms.PictureBox();
             this.pb_Inzet = new System.Windows.Forms.PictureBox();
             this.pb_Rating = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Onderzoeken)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Concepting)).BeginInit();
@@ -172,105 +172,105 @@
             this.btn_Vaardigheden.UseVisualStyleBackColor = true;
             this.btn_Vaardigheden.Click += new System.EventHandler(this.btn_Vaardigheden_Click);
             // 
-            // pb_Vaardigheid_4
+            // pb_Verantwoordelijkheid_4
             // 
-            this.pb_Vaardigheid_4.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Vaardigheid_4.Location = new System.Drawing.Point(149, 336);
-            this.pb_Vaardigheid_4.Name = "pb_Vaardigheid_4";
-            this.pb_Vaardigheid_4.Size = new System.Drawing.Size(60, 60);
-            this.pb_Vaardigheid_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Vaardigheid_4.TabIndex = 26;
-            this.pb_Vaardigheid_4.TabStop = false;
-            // 
-            // pb_Vaardigheid_2
-            // 
-            this.pb_Vaardigheid_2.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Vaardigheid_2.Location = new System.Drawing.Point(149, 132);
-            this.pb_Vaardigheid_2.Name = "pb_Vaardigheid_2";
-            this.pb_Vaardigheid_2.Size = new System.Drawing.Size(60, 60);
-            this.pb_Vaardigheid_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Vaardigheid_2.TabIndex = 25;
-            this.pb_Vaardigheid_2.TabStop = false;
-            // 
-            // pb_Vaardigheid_3
-            // 
-            this.pb_Vaardigheid_3.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Vaardigheid_3.Location = new System.Drawing.Point(116, 236);
-            this.pb_Vaardigheid_3.Name = "pb_Vaardigheid_3";
-            this.pb_Vaardigheid_3.Size = new System.Drawing.Size(60, 60);
-            this.pb_Vaardigheid_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Vaardigheid_3.TabIndex = 24;
-            this.pb_Vaardigheid_3.TabStop = false;
-            // 
-            // pb_Vaardigheid_5
-            // 
-            this.pb_Vaardigheid_5.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Vaardigheid_5.Location = new System.Drawing.Point(243, 403);
-            this.pb_Vaardigheid_5.Name = "pb_Vaardigheid_5";
-            this.pb_Vaardigheid_5.Size = new System.Drawing.Size(60, 60);
-            this.pb_Vaardigheid_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Vaardigheid_5.TabIndex = 23;
-            this.pb_Vaardigheid_5.TabStop = false;
-            // 
-            // pb_Vaardigheid_1
-            // 
-            this.pb_Vaardigheid_1.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Vaardigheid_1.Location = new System.Drawing.Point(243, 70);
-            this.pb_Vaardigheid_1.Name = "pb_Vaardigheid_1";
-            this.pb_Vaardigheid_1.Size = new System.Drawing.Size(60, 60);
-            this.pb_Vaardigheid_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Vaardigheid_1.TabIndex = 22;
-            this.pb_Vaardigheid_1.TabStop = false;
+            this.pb_Verantwoordelijkheid_4.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Verantwoordelijkheid_4.Location = new System.Drawing.Point(149, 336);
+            this.pb_Verantwoordelijkheid_4.Name = "pb_Verantwoordelijkheid_4";
+            this.pb_Verantwoordelijkheid_4.Size = new System.Drawing.Size(60, 60);
+            this.pb_Verantwoordelijkheid_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Verantwoordelijkheid_4.TabIndex = 26;
+            this.pb_Verantwoordelijkheid_4.TabStop = false;
             // 
             // pb_Verantwoordelijkheid_2
             // 
             this.pb_Verantwoordelijkheid_2.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Verantwoordelijkheid_2.Location = new System.Drawing.Point(425, 132);
+            this.pb_Verantwoordelijkheid_2.Location = new System.Drawing.Point(149, 132);
             this.pb_Verantwoordelijkheid_2.Name = "pb_Verantwoordelijkheid_2";
             this.pb_Verantwoordelijkheid_2.Size = new System.Drawing.Size(60, 60);
             this.pb_Verantwoordelijkheid_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Verantwoordelijkheid_2.TabIndex = 21;
+            this.pb_Verantwoordelijkheid_2.TabIndex = 25;
             this.pb_Verantwoordelijkheid_2.TabStop = false;
-            // 
-            // pb_Verantwoordelijkheid_4
-            // 
-            this.pb_Verantwoordelijkheid_4.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Verantwoordelijkheid_4.Location = new System.Drawing.Point(425, 336);
-            this.pb_Verantwoordelijkheid_4.Name = "pb_Verantwoordelijkheid_4";
-            this.pb_Verantwoordelijkheid_4.Size = new System.Drawing.Size(60, 60);
-            this.pb_Verantwoordelijkheid_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Verantwoordelijkheid_4.TabIndex = 20;
-            this.pb_Verantwoordelijkheid_4.TabStop = false;
-            // 
-            // pb_Verantwoordelijkheid_5
-            // 
-            this.pb_Verantwoordelijkheid_5.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Verantwoordelijkheid_5.Location = new System.Drawing.Point(335, 403);
-            this.pb_Verantwoordelijkheid_5.Name = "pb_Verantwoordelijkheid_5";
-            this.pb_Verantwoordelijkheid_5.Size = new System.Drawing.Size(60, 60);
-            this.pb_Verantwoordelijkheid_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Verantwoordelijkheid_5.TabIndex = 19;
-            this.pb_Verantwoordelijkheid_5.TabStop = false;
             // 
             // pb_Verantwoordelijkheid_3
             // 
             this.pb_Verantwoordelijkheid_3.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Verantwoordelijkheid_3.Location = new System.Drawing.Point(461, 236);
+            this.pb_Verantwoordelijkheid_3.Location = new System.Drawing.Point(116, 236);
             this.pb_Verantwoordelijkheid_3.Name = "pb_Verantwoordelijkheid_3";
             this.pb_Verantwoordelijkheid_3.Size = new System.Drawing.Size(60, 60);
             this.pb_Verantwoordelijkheid_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Verantwoordelijkheid_3.TabIndex = 18;
+            this.pb_Verantwoordelijkheid_3.TabIndex = 24;
             this.pb_Verantwoordelijkheid_3.TabStop = false;
+            // 
+            // pb_Verantwoordelijkheid_5
+            // 
+            this.pb_Verantwoordelijkheid_5.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Verantwoordelijkheid_5.Location = new System.Drawing.Point(243, 403);
+            this.pb_Verantwoordelijkheid_5.Name = "pb_Verantwoordelijkheid_5";
+            this.pb_Verantwoordelijkheid_5.Size = new System.Drawing.Size(60, 60);
+            this.pb_Verantwoordelijkheid_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Verantwoordelijkheid_5.TabIndex = 23;
+            this.pb_Verantwoordelijkheid_5.TabStop = false;
             // 
             // pb_Verantwoordelijkheid_1
             // 
             this.pb_Verantwoordelijkheid_1.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Verantwoordelijkheid_1.Location = new System.Drawing.Point(335, 70);
+            this.pb_Verantwoordelijkheid_1.Location = new System.Drawing.Point(243, 70);
             this.pb_Verantwoordelijkheid_1.Name = "pb_Verantwoordelijkheid_1";
             this.pb_Verantwoordelijkheid_1.Size = new System.Drawing.Size(60, 60);
             this.pb_Verantwoordelijkheid_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Verantwoordelijkheid_1.TabIndex = 17;
+            this.pb_Verantwoordelijkheid_1.TabIndex = 22;
             this.pb_Verantwoordelijkheid_1.TabStop = false;
+            // 
+            // pb_Vaardigheid_2
+            // 
+            this.pb_Vaardigheid_2.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_2.Location = new System.Drawing.Point(425, 132);
+            this.pb_Vaardigheid_2.Name = "pb_Vaardigheid_2";
+            this.pb_Vaardigheid_2.Size = new System.Drawing.Size(60, 60);
+            this.pb_Vaardigheid_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Vaardigheid_2.TabIndex = 21;
+            this.pb_Vaardigheid_2.TabStop = false;
+            // 
+            // pb_Vaardigheid_4
+            // 
+            this.pb_Vaardigheid_4.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_4.Location = new System.Drawing.Point(425, 336);
+            this.pb_Vaardigheid_4.Name = "pb_Vaardigheid_4";
+            this.pb_Vaardigheid_4.Size = new System.Drawing.Size(60, 60);
+            this.pb_Vaardigheid_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Vaardigheid_4.TabIndex = 20;
+            this.pb_Vaardigheid_4.TabStop = false;
+            // 
+            // pb_Vaardigheid_5
+            // 
+            this.pb_Vaardigheid_5.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_5.Location = new System.Drawing.Point(335, 403);
+            this.pb_Vaardigheid_5.Name = "pb_Vaardigheid_5";
+            this.pb_Vaardigheid_5.Size = new System.Drawing.Size(60, 60);
+            this.pb_Vaardigheid_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Vaardigheid_5.TabIndex = 19;
+            this.pb_Vaardigheid_5.TabStop = false;
+            // 
+            // pb_Vaardigheid_3
+            // 
+            this.pb_Vaardigheid_3.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_3.Location = new System.Drawing.Point(461, 236);
+            this.pb_Vaardigheid_3.Name = "pb_Vaardigheid_3";
+            this.pb_Vaardigheid_3.Size = new System.Drawing.Size(60, 60);
+            this.pb_Vaardigheid_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Vaardigheid_3.TabIndex = 18;
+            this.pb_Vaardigheid_3.TabStop = false;
+            // 
+            // pb_Vaardigheid_1
+            // 
+            this.pb_Vaardigheid_1.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_1.Location = new System.Drawing.Point(335, 70);
+            this.pb_Vaardigheid_1.Name = "pb_Vaardigheid_1";
+            this.pb_Vaardigheid_1.Size = new System.Drawing.Size(60, 60);
+            this.pb_Vaardigheid_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Vaardigheid_1.TabIndex = 17;
+            this.pb_Vaardigheid_1.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -350,16 +350,16 @@
             this.Controls.Add(this.btn_Vaardigheden);
             this.Controls.Add(this.btn_Verantwoordelijkheden);
             this.Controls.Add(this.btn_Statistieken);
-            this.Controls.Add(this.pb_Vaardigheid_4);
-            this.Controls.Add(this.pb_Vaardigheid_2);
-            this.Controls.Add(this.pb_Vaardigheid_3);
-            this.Controls.Add(this.pb_Vaardigheid_5);
-            this.Controls.Add(this.pb_Vaardigheid_1);
-            this.Controls.Add(this.pb_Verantwoordelijkheid_2);
             this.Controls.Add(this.pb_Verantwoordelijkheid_4);
-            this.Controls.Add(this.pb_Verantwoordelijkheid_5);
+            this.Controls.Add(this.pb_Verantwoordelijkheid_2);
             this.Controls.Add(this.pb_Verantwoordelijkheid_3);
+            this.Controls.Add(this.pb_Verantwoordelijkheid_5);
             this.Controls.Add(this.pb_Verantwoordelijkheid_1);
+            this.Controls.Add(this.pb_Vaardigheid_2);
+            this.Controls.Add(this.pb_Vaardigheid_4);
+            this.Controls.Add(this.pb_Vaardigheid_5);
+            this.Controls.Add(this.pb_Vaardigheid_3);
+            this.Controls.Add(this.pb_Vaardigheid_1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pb_Onderzoeken);
@@ -378,16 +378,16 @@
             this.Name = "Profile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Vaardigheid_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Onderzoeken)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Concepting)).EndInit();
@@ -415,16 +415,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pb_Onderzoeken;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_1;
-        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_3;
-        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_5;
-        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_4;
-        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_2;
         private System.Windows.Forms.PictureBox pb_Vaardigheid_1;
-        private System.Windows.Forms.PictureBox pb_Vaardigheid_5;
         private System.Windows.Forms.PictureBox pb_Vaardigheid_3;
-        private System.Windows.Forms.PictureBox pb_Vaardigheid_2;
+        private System.Windows.Forms.PictureBox pb_Vaardigheid_5;
         private System.Windows.Forms.PictureBox pb_Vaardigheid_4;
+        private System.Windows.Forms.PictureBox pb_Vaardigheid_2;
+        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_1;
+        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_5;
+        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_3;
+        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_2;
+        private System.Windows.Forms.PictureBox pb_Verantwoordelijkheid_4;
         private System.Windows.Forms.Button btn_Statistieken;
         private System.Windows.Forms.Button btn_Verantwoordelijkheden;
         private System.Windows.Forms.Button btn_Vaardigheden;
