@@ -66,6 +66,7 @@
     <Compile Include="Classes\Model\CategoryType.cs" />
     <Compile Include="Classes\Model\Names.cs" />
     <Compile Include="Classes\Model\Rating.cs" />
+    <Compile Include="Classes\Model\Responsibility.cs" />
     <Compile Include="Classes\Model\Skills.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -111,6 +112,12 @@
     <Compile Include="SelecteerVaardigheden.Designer.cs">
       <DependentUpon>SelecteerVaardigheden.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelecteerVerantwoordelijkheden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelecteerVerantwoordelijkheden.Designer.cs">
+      <DependentUpon>SelecteerVerantwoordelijkheden.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectToGiveFeedbackToForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SelecteerVaardigheden.resx">
       <DependentUpon>SelecteerVaardigheden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelecteerVerantwoordelijkheden.resx">
+      <DependentUpon>SelecteerVerantwoordelijkheden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectToGiveFeedbackToForm.resx">
       <DependentUpon>SelectToGiveFeedbackToForm.cs</DependentUpon>
@@ -191,6 +201,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Image\Green_check_mark.png" />
+    <None Include="Image\Icons_ verantwoordelijkheden\Sfeerbeheer.png" />
+    <None Include="Image\Icons_ verantwoordelijkheden\scrum.png" />
+    <None Include="Image\Icons_ verantwoordelijkheden\planning.png" />
+    <None Include="Image\Icons_ verantwoordelijkheden\ICT beheer.png" />
+    <None Include="Image\Icons_ verantwoordelijkheden\Git.png" />
+    <None Include="Image\Icons_ verantwoordelijkheden\File.png" />
+    <None Include="Image\Icons_ verantwoordelijkheden\eten.png" />
+    <None Include="Image\Icons_ verantwoordelijkheden\Database onderhoud.png" />
     <None Include="Image\Paars-vierkant.png" />
     <None Include="Image\Blauw-vierkant.png" />
     <None Include="Image\Icons_ Skills\web.png" />

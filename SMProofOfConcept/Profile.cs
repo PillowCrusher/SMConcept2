@@ -46,6 +46,7 @@ namespace SMProofOfConcept
             PaintRating(pb_Onderzoeken, ratingLogic.getRating(profileName, CategoryType.Onderzoek), 15);
 
             UpdateSkills();
+            UpdateResponsibilities();
         }
 
         private void UpdateSkills()
@@ -91,6 +92,50 @@ namespace SMProofOfConcept
             }
         }
 
+        private void UpdateResponsibilities()
+        {
+            List<PictureBox> pb_Responsibilities = new List<PictureBox>() { pb_Verantwoordelijkheid_1, pb_Verantwoordelijkheid_2, pb_Verantwoordelijkheid_3, pb_Verantwoordelijkheid_4, pb_Verantwoordelijkheid_5 };
+            List<DatabaseResponsibility> responsibilities = profileLogic.GetResponsibilities(profileName).ToList();
+            Responsibility responsEnum;
+            for (int i = 0; i < 5; i++)
+            {
+                if (i > responsibilities.Count - 1)
+                {
+                    pb_Responsibilities[i].Image = Properties.Resources.Paars_vierkant;
+                }
+                else
+                {
+                    Enum.TryParse(responsibilities[i].Responsibility, out responsEnum);
+                    pb_Responsibilities[i].Image = GetResponsibilityImage(responsEnum);
+                }
+            }
+        }
+
+        private Bitmap GetResponsibilityImage(Responsibility respons)
+        {
+            switch (respons)
+            {
+                case Responsibility.Database:
+                    return Properties.Resources.Database_onderhoud;
+                case Responsibility.File:
+                    return Properties.Resources.File;
+                case Responsibility.Git:
+                    return Properties.Resources.Git;
+                case Responsibility.ICT:
+                    return Properties.Resources.ICT_beheer;
+                case Responsibility.Scrum:
+                    return Properties.Resources.scrum;
+                case Responsibility.Schedule:
+                    return Properties.Resources.planning;
+                case Responsibility.Food:
+                    return Properties.Resources.eten;
+                case Responsibility.Mood:
+                    return Properties.Resources.Sfeerbeheer;
+                default:
+                    return null;
+            }
+        }
+
         private void PaintRating(PictureBox pb, string text, int fontSize)
         {
             pb.Paint += new PaintEventHandler((sender, e) =>
@@ -112,7 +157,14 @@ namespace SMProofOfConcept
 
         private void btn_Verantwoordelijkheden_Click(object sender, EventArgs e)
         {
+            SelecteerVerantwoordelijkheden svForm = new SelecteerVerantwoordelijkheden(profileName);
+            svForm.FormClosed += ResponsibilityFormClosed;
+            svForm.ShowDialog();
+        }
 
+        private void ResponsibilityFormClosed(object sender, FormClosedEventArgs e)
+        {
+            UpdateResponsibilities();
         }
 
         private void btn_Vaardigheden_Click(object sender, EventArgs e)
@@ -129,7 +181,8 @@ namespace SMProofOfConcept
 
         private void btn_Statistieken_Click(object sender, EventArgs e)
         {
-
+            Graphs graphsForm = new Graphs(profileName);
+            graphsForm.ShowDialog();
         }
     }
 }

@@ -174,7 +174,7 @@
             // 
             // pb_Verantwoordelijkheid_4
             // 
-            this.pb_Verantwoordelijkheid_4.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Verantwoordelijkheid_4.Image = global::SMProofOfConcept.Properties.Resources.Paars_vierkant;
             this.pb_Verantwoordelijkheid_4.Location = new System.Drawing.Point(149, 336);
             this.pb_Verantwoordelijkheid_4.Name = "pb_Verantwoordelijkheid_4";
             this.pb_Verantwoordelijkheid_4.Size = new System.Drawing.Size(60, 60);
@@ -184,7 +184,7 @@
             // 
             // pb_Verantwoordelijkheid_2
             // 
-            this.pb_Verantwoordelijkheid_2.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Verantwoordelijkheid_2.Image = global::SMProofOfConcept.Properties.Resources.Paars_vierkant;
             this.pb_Verantwoordelijkheid_2.Location = new System.Drawing.Point(149, 132);
             this.pb_Verantwoordelijkheid_2.Name = "pb_Verantwoordelijkheid_2";
             this.pb_Verantwoordelijkheid_2.Size = new System.Drawing.Size(60, 60);
@@ -194,7 +194,7 @@
             // 
             // pb_Verantwoordelijkheid_3
             // 
-            this.pb_Verantwoordelijkheid_3.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Verantwoordelijkheid_3.Image = global::SMProofOfConcept.Properties.Resources.Paars_vierkant;
             this.pb_Verantwoordelijkheid_3.Location = new System.Drawing.Point(116, 236);
             this.pb_Verantwoordelijkheid_3.Name = "pb_Verantwoordelijkheid_3";
             this.pb_Verantwoordelijkheid_3.Size = new System.Drawing.Size(60, 60);
@@ -204,7 +204,7 @@
             // 
             // pb_Verantwoordelijkheid_5
             // 
-            this.pb_Verantwoordelijkheid_5.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Verantwoordelijkheid_5.Image = global::SMProofOfConcept.Properties.Resources.Paars_vierkant;
             this.pb_Verantwoordelijkheid_5.Location = new System.Drawing.Point(243, 403);
             this.pb_Verantwoordelijkheid_5.Name = "pb_Verantwoordelijkheid_5";
             this.pb_Verantwoordelijkheid_5.Size = new System.Drawing.Size(60, 60);
@@ -214,7 +214,7 @@
             // 
             // pb_Verantwoordelijkheid_1
             // 
-            this.pb_Verantwoordelijkheid_1.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Verantwoordelijkheid_1.Image = global::SMProofOfConcept.Properties.Resources.Paars_vierkant;
             this.pb_Verantwoordelijkheid_1.Location = new System.Drawing.Point(243, 70);
             this.pb_Verantwoordelijkheid_1.Name = "pb_Verantwoordelijkheid_1";
             this.pb_Verantwoordelijkheid_1.Size = new System.Drawing.Size(60, 60);
@@ -224,7 +224,7 @@
             // 
             // pb_Vaardigheid_2
             // 
-            this.pb_Vaardigheid_2.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_2.Image = global::SMProofOfConcept.Properties.Resources.Blauw_vierkant;
             this.pb_Vaardigheid_2.Location = new System.Drawing.Point(425, 132);
             this.pb_Vaardigheid_2.Name = "pb_Vaardigheid_2";
             this.pb_Vaardigheid_2.Size = new System.Drawing.Size(60, 60);
@@ -234,7 +234,7 @@
             // 
             // pb_Vaardigheid_4
             // 
-            this.pb_Vaardigheid_4.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_4.Image = global::SMProofOfConcept.Properties.Resources.Blauw_vierkant;
             this.pb_Vaardigheid_4.Location = new System.Drawing.Point(425, 336);
             this.pb_Vaardigheid_4.Name = "pb_Vaardigheid_4";
             this.pb_Vaardigheid_4.Size = new System.Drawing.Size(60, 60);
@@ -244,7 +244,7 @@
             // 
             // pb_Vaardigheid_5
             // 
-            this.pb_Vaardigheid_5.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_5.Image = global::SMProofOfConcept.Properties.Resources.Blauw_vierkant;
             this.pb_Vaardigheid_5.Location = new System.Drawing.Point(335, 403);
             this.pb_Vaardigheid_5.Name = "pb_Vaardigheid_5";
             this.pb_Vaardigheid_5.Size = new System.Drawing.Size(60, 60);
@@ -254,7 +254,7 @@
             // 
             // pb_Vaardigheid_3
             // 
-            this.pb_Vaardigheid_3.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_3.Image = global::SMProofOfConcept.Properties.Resources.Blauw_vierkant;
             this.pb_Vaardigheid_3.Location = new System.Drawing.Point(461, 236);
             this.pb_Vaardigheid_3.Name = "pb_Vaardigheid_3";
             this.pb_Vaardigheid_3.Size = new System.Drawing.Size(60, 60);
@@ -264,7 +264,7 @@
             // 
             // pb_Vaardigheid_1
             // 
-            this.pb_Vaardigheid_1.Image = global::SMProofOfConcept.Properties.Resources.Circle;
+            this.pb_Vaardigheid_1.Image = global::SMProofOfConcept.Properties.Resources.Blauw_vierkant;
             this.pb_Vaardigheid_1.Location = new System.Drawing.Point(335, 70);
             this.pb_Vaardigheid_1.Name = "pb_Vaardigheid_1";
             this.pb_Vaardigheid_1.Size = new System.Drawing.Size(60, 60);

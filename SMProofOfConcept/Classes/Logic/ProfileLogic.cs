@@ -59,12 +59,61 @@ namespace SMProofOfConcept.Classes.Logic
             dbCon.sendQuery(query);
         }
 
+        public DatabaseResponsibility[] GetResponsibilities(string name)
+        {
+            string query = "SELECT * FROM SMResponsibilities WHERE Name = '";
+            query += name + "'";
+
+            string jsonString = dbCon.sendQuery(query);
+            return JsonConvert.DeserializeObject<DatabaseResponsibility[]>(jsonString);
+        }
+
+        public void SafeResponsibilities(List<DatabaseResponsibility> responsibilities, string name)
+        {
+            RemoveResponsibilities(name);
+
+            string query = "INSERT INTO SMResponsibilities (ResponsibilityId, Name, Responsibility) VALUES (NULL, '";
+            bool isFirst = true;
+
+            foreach (DatabaseResponsibility respons in responsibilities)
+            {
+                if (isFirst)
+                {
+                    query += name + "', '";
+                    query += respons.Responsibility.ToString() + "')";
+                    isFirst = false;
+                }
+                else
+                {
+                    query += ", (NULL, '";
+                    query += name + "', '";
+                    query += respons.Responsibility.ToString() + "')";
+                }
+            }
+
+            dbCon.sendQuery(query);
+
+        }
+
+        private void RemoveResponsibilities(string name)
+        {
+            string query = "DELETE FROM SMResponsibilities WHERE Name = '";
+            query += name + "'";
+            dbCon.sendQuery(query);
+        }
+
     }
 
     public class DatabaseSkill
     {
         public string Name { get; set; }
         public string Skill { get; set; }
+    }
+
+    public class DatabaseResponsibility
+    {
+        public string Name { get; set; }
+        public string Responsibility { get; set; }
     }
 
 }

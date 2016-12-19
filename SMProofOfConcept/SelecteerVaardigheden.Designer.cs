@@ -66,7 +66,7 @@
             // btn_Opslaan
             // 
             this.btn_Opslaan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Opslaan.Location = new System.Drawing.Point(184, 266);
+            this.btn_Opslaan.Location = new System.Drawing.Point(184, 265);
             this.btn_Opslaan.Name = "btn_Opslaan";
             this.btn_Opslaan.Size = new System.Drawing.Size(137, 31);
             this.btn_Opslaan.TabIndex = 8;
@@ -77,8 +77,8 @@
             // pb_Check_UI
             // 
             this.pb_Check_UI.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Check_UI.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Check_UI.Location = new System.Drawing.Point(477, 217);
+            this.pb_Check_UI.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
+            this.pb_Check_UI.Location = new System.Drawing.Point(477, 216);
             this.pb_Check_UI.Name = "pb_Check_UI";
             this.pb_Check_UI.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_UI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,8 +88,8 @@
             // pb_Check_Research
             // 
             this.pb_Check_Research.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Check_Research.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Check_Research.Location = new System.Drawing.Point(347, 217);
+            this.pb_Check_Research.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
+            this.pb_Check_Research.Location = new System.Drawing.Point(347, 216);
             this.pb_Check_Research.Name = "pb_Check_Research";
             this.pb_Check_Research.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Research.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,8 +99,8 @@
             // pb_Check_Database
             // 
             this.pb_Check_Database.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Check_Database.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Check_Database.Location = new System.Drawing.Point(217, 217);
+            this.pb_Check_Database.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
+            this.pb_Check_Database.Location = new System.Drawing.Point(217, 216);
             this.pb_Check_Database.Name = "pb_Check_Database";
             this.pb_Check_Database.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Database.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,8 +110,8 @@
             // pb_Check_Concepting
             // 
             this.pb_Check_Concepting.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Check_Concepting.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Check_Concepting.Location = new System.Drawing.Point(87, 217);
+            this.pb_Check_Concepting.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
+            this.pb_Check_Concepting.Location = new System.Drawing.Point(87, 216);
             this.pb_Check_Concepting.Name = "pb_Check_Concepting";
             this.pb_Check_Concepting.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Concepting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,8 +121,8 @@
             // pb_Check_Web
             // 
             this.pb_Check_Web.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Check_Web.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Check_Web.Location = new System.Drawing.Point(477, 88);
+            this.pb_Check_Web.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
+            this.pb_Check_Web.Location = new System.Drawing.Point(477, 87);
             this.pb_Check_Web.Name = "pb_Check_Web";
             this.pb_Check_Web.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Web.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,8 +132,8 @@
             // pb_Check_Java
             // 
             this.pb_Check_Java.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Check_Java.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Check_Java.Location = new System.Drawing.Point(347, 88);
+            this.pb_Check_Java.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
+            this.pb_Check_Java.Location = new System.Drawing.Point(347, 87);
             this.pb_Check_Java.Name = "pb_Check_Java";
             this.pb_Check_Java.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Java.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,8 +143,8 @@
             // pb_Check_Csharp
             // 
             this.pb_Check_Csharp.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Check_Csharp.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Check_Csharp.Location = new System.Drawing.Point(217, 88);
+            this.pb_Check_Csharp.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
+            this.pb_Check_Csharp.Location = new System.Drawing.Point(217, 87);
             this.pb_Check_Csharp.Name = "pb_Check_Csharp";
             this.pb_Check_Csharp.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Csharp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,8 +154,8 @@
             // pb_Check_C
             // 
             this.pb_Check_C.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Check_C.Image = global::SMProofOfConcept.Properties.Resources.Circle;
-            this.pb_Check_C.Location = new System.Drawing.Point(87, 88);
+            this.pb_Check_C.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
+            this.pb_Check_C.Location = new System.Drawing.Point(87, 87);
             this.pb_Check_C.Name = "pb_Check_C";
             this.pb_Check_C.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_C.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -166,7 +166,7 @@
             // 
             this.pb_UI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_UI.Image = global::SMProofOfConcept.Properties.Resources.UX;
-            this.pb_UI.Location = new System.Drawing.Point(402, 142);
+            this.pb_UI.Location = new System.Drawing.Point(402, 141);
             this.pb_UI.Name = "pb_UI";
             this.pb_UI.Size = new System.Drawing.Size(100, 100);
             this.pb_UI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +178,7 @@
             // 
             this.pb_Research.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Research.Image = global::SMProofOfConcept.Properties.Resources.research;
-            this.pb_Research.Location = new System.Drawing.Point(272, 142);
+            this.pb_Research.Location = new System.Drawing.Point(272, 141);
             this.pb_Research.Name = "pb_Research";
             this.pb_Research.Size = new System.Drawing.Size(100, 100);
             this.pb_Research.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +190,7 @@
             // 
             this.pb_Concepting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Concepting.Image = global::SMProofOfConcept.Properties.Resources.concepting;
-            this.pb_Concepting.Location = new System.Drawing.Point(12, 142);
+            this.pb_Concepting.Location = new System.Drawing.Point(12, 141);
             this.pb_Concepting.Name = "pb_Concepting";
             this.pb_Concepting.Size = new System.Drawing.Size(100, 100);
             this.pb_Concepting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +202,7 @@
             // 
             this.pb_Database.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Database.Image = global::SMProofOfConcept.Properties.Resources.database;
-            this.pb_Database.Location = new System.Drawing.Point(142, 142);
+            this.pb_Database.Location = new System.Drawing.Point(142, 141);
             this.pb_Database.Name = "pb_Database";
             this.pb_Database.Size = new System.Drawing.Size(100, 100);
             this.pb_Database.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +214,7 @@
             // 
             this.pb_Web.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Web.Image = global::SMProofOfConcept.Properties.Resources.web;
-            this.pb_Web.Location = new System.Drawing.Point(402, 12);
+            this.pb_Web.Location = new System.Drawing.Point(402, 11);
             this.pb_Web.Name = "pb_Web";
             this.pb_Web.Size = new System.Drawing.Size(100, 100);
             this.pb_Web.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -226,7 +226,7 @@
             // 
             this.pb_Java.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Java.Image = global::SMProofOfConcept.Properties.Resources.java;
-            this.pb_Java.Location = new System.Drawing.Point(272, 13);
+            this.pb_Java.Location = new System.Drawing.Point(272, 12);
             this.pb_Java.Name = "pb_Java";
             this.pb_Java.Size = new System.Drawing.Size(100, 100);
             this.pb_Java.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,7 +238,7 @@
             // 
             this.pb_csharp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_csharp.Image = global::SMProofOfConcept.Properties.Resources.c_;
-            this.pb_csharp.Location = new System.Drawing.Point(142, 13);
+            this.pb_csharp.Location = new System.Drawing.Point(142, 12);
             this.pb_csharp.Name = "pb_csharp";
             this.pb_csharp.Size = new System.Drawing.Size(100, 100);
             this.pb_csharp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -250,7 +250,7 @@
             // 
             this.pb_C.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_C.Image = global::SMProofOfConcept.Properties.Resources.C;
-            this.pb_C.Location = new System.Drawing.Point(12, 13);
+            this.pb_C.Location = new System.Drawing.Point(12, 12);
             this.pb_C.Name = "pb_C";
             this.pb_C.Size = new System.Drawing.Size(100, 100);
             this.pb_C.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
