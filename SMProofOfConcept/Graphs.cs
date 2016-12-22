@@ -16,15 +16,13 @@ namespace SMProofOfConcept
     public partial class Graphs : Form
     {
         private DatabaseConnection databaseConnection;
-
+        private string name;
         public Graphs(string name)
         {
             InitializeComponent();
             chart1.ChartAreas["ChartArea1"].AxisX.Interval = 1;
             databaseConnection = new DatabaseConnection();
-            List<Rating> ratings = databaseConnection.sendRatingQuery("SELECT * FROM SMRatings WHERE Name = '" + name + "'");
-            ratings.Sort();
-
+            this.name = name;
         }
 
         public void fillChart(List<string> categoryList)
@@ -32,7 +30,7 @@ namespace SMProofOfConcept
             chart1.Series.Clear();
             if (categoryList.Count == 0)
             {
-                
+                List<Rating> ratings = databaseConnection.sendRatingQuery("SELECT * FROM SMRatings WHERE Name = '" + name + "'");
             }
         }
     }
