@@ -45,6 +45,14 @@
             this.pb_Git = new System.Windows.Forms.PictureBox();
             this.pb_File = new System.Windows.Forms.PictureBox();
             this.pb_Database = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Check_Mood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Check_Food)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Check_Schedule)).BeginInit();
@@ -66,7 +74,7 @@
             // btn_Opslaan
             // 
             this.btn_Opslaan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Opslaan.Location = new System.Drawing.Point(185, 270);
+            this.btn_Opslaan.Location = new System.Drawing.Point(184, 261);
             this.btn_Opslaan.Name = "btn_Opslaan";
             this.btn_Opslaan.Size = new System.Drawing.Size(137, 31);
             this.btn_Opslaan.TabIndex = 25;
@@ -78,7 +86,7 @@
             // 
             this.pb_Check_Mood.BackColor = System.Drawing.Color.Transparent;
             this.pb_Check_Mood.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
-            this.pb_Check_Mood.Location = new System.Drawing.Point(477, 216);
+            this.pb_Check_Mood.Location = new System.Drawing.Point(477, 206);
             this.pb_Check_Mood.Name = "pb_Check_Mood";
             this.pb_Check_Mood.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Mood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,7 +97,7 @@
             // 
             this.pb_Check_Food.BackColor = System.Drawing.Color.Transparent;
             this.pb_Check_Food.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
-            this.pb_Check_Food.Location = new System.Drawing.Point(347, 216);
+            this.pb_Check_Food.Location = new System.Drawing.Point(347, 206);
             this.pb_Check_Food.Name = "pb_Check_Food";
             this.pb_Check_Food.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Food.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +108,7 @@
             // 
             this.pb_Check_Schedule.BackColor = System.Drawing.Color.Transparent;
             this.pb_Check_Schedule.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
-            this.pb_Check_Schedule.Location = new System.Drawing.Point(217, 216);
+            this.pb_Check_Schedule.Location = new System.Drawing.Point(217, 206);
             this.pb_Check_Schedule.Name = "pb_Check_Schedule";
             this.pb_Check_Schedule.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Schedule.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,7 +119,7 @@
             // 
             this.pb_Check_Scrum.BackColor = System.Drawing.Color.Transparent;
             this.pb_Check_Scrum.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
-            this.pb_Check_Scrum.Location = new System.Drawing.Point(87, 216);
+            this.pb_Check_Scrum.Location = new System.Drawing.Point(87, 206);
             this.pb_Check_Scrum.Name = "pb_Check_Scrum";
             this.pb_Check_Scrum.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Scrum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -166,7 +174,7 @@
             // 
             this.pb_Mood.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Mood.Image = global::SMProofOfConcept.Properties.Resources.Sfeerbeheer;
-            this.pb_Mood.Location = new System.Drawing.Point(402, 141);
+            this.pb_Mood.Location = new System.Drawing.Point(402, 131);
             this.pb_Mood.Name = "pb_Mood";
             this.pb_Mood.Size = new System.Drawing.Size(100, 100);
             this.pb_Mood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +186,7 @@
             // 
             this.pb_Food.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Food.Image = global::SMProofOfConcept.Properties.Resources.eten;
-            this.pb_Food.Location = new System.Drawing.Point(272, 141);
+            this.pb_Food.Location = new System.Drawing.Point(272, 131);
             this.pb_Food.Name = "pb_Food";
             this.pb_Food.Size = new System.Drawing.Size(100, 100);
             this.pb_Food.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +198,7 @@
             // 
             this.pb_Scrum.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Scrum.Image = global::SMProofOfConcept.Properties.Resources.scrum;
-            this.pb_Scrum.Location = new System.Drawing.Point(12, 141);
+            this.pb_Scrum.Location = new System.Drawing.Point(12, 131);
             this.pb_Scrum.Name = "pb_Scrum";
             this.pb_Scrum.Size = new System.Drawing.Size(100, 100);
             this.pb_Scrum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +210,7 @@
             // 
             this.pb_Schedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Schedule.Image = global::SMProofOfConcept.Properties.Resources.planning;
-            this.pb_Schedule.Location = new System.Drawing.Point(142, 141);
+            this.pb_Schedule.Location = new System.Drawing.Point(142, 131);
             this.pb_Schedule.Name = "pb_Schedule";
             this.pb_Schedule.Size = new System.Drawing.Size(100, 100);
             this.pb_Schedule.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,11 +266,91 @@
             this.pb_Database.TabStop = false;
             this.pb_Database.Click += new System.EventHandler(this.pb_Database_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(442, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 13);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "ICT";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(311, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 13);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Git";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(171, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Archief";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Database";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(437, 234);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Sfeer";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(305, 234);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 13);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Eten";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(179, 234);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "Planning";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(52, 234);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Scrum";
+            // 
             // SelecteerVerantwoordelijkheden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 316);
+            this.ClientSize = new System.Drawing.Size(517, 303);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_Check_Mood);
             this.Controls.Add(this.pb_Check_Food);
             this.Controls.Add(this.pb_Check_Schedule);
@@ -302,6 +390,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_File)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Database)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -324,5 +413,13 @@
         private System.Windows.Forms.PictureBox pb_Git;
         private System.Windows.Forms.PictureBox pb_File;
         private System.Windows.Forms.PictureBox pb_Database;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

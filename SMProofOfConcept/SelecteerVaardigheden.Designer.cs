@@ -45,6 +45,14 @@
             this.pb_Java = new System.Windows.Forms.PictureBox();
             this.pb_csharp = new System.Windows.Forms.PictureBox();
             this.pb_C = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Check_UI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Check_Research)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Check_Database)).BeginInit();
@@ -66,7 +74,7 @@
             // btn_Opslaan
             // 
             this.btn_Opslaan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Opslaan.Location = new System.Drawing.Point(184, 265);
+            this.btn_Opslaan.Location = new System.Drawing.Point(184, 261);
             this.btn_Opslaan.Name = "btn_Opslaan";
             this.btn_Opslaan.Size = new System.Drawing.Size(137, 31);
             this.btn_Opslaan.TabIndex = 8;
@@ -78,7 +86,7 @@
             // 
             this.pb_Check_UI.BackColor = System.Drawing.Color.Transparent;
             this.pb_Check_UI.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
-            this.pb_Check_UI.Location = new System.Drawing.Point(477, 216);
+            this.pb_Check_UI.Location = new System.Drawing.Point(477, 206);
             this.pb_Check_UI.Name = "pb_Check_UI";
             this.pb_Check_UI.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_UI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,7 +97,7 @@
             // 
             this.pb_Check_Research.BackColor = System.Drawing.Color.Transparent;
             this.pb_Check_Research.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
-            this.pb_Check_Research.Location = new System.Drawing.Point(347, 216);
+            this.pb_Check_Research.Location = new System.Drawing.Point(347, 206);
             this.pb_Check_Research.Name = "pb_Check_Research";
             this.pb_Check_Research.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Research.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +108,7 @@
             // 
             this.pb_Check_Database.BackColor = System.Drawing.Color.Transparent;
             this.pb_Check_Database.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
-            this.pb_Check_Database.Location = new System.Drawing.Point(217, 216);
+            this.pb_Check_Database.Location = new System.Drawing.Point(217, 206);
             this.pb_Check_Database.Name = "pb_Check_Database";
             this.pb_Check_Database.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Database.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,7 +119,7 @@
             // 
             this.pb_Check_Concepting.BackColor = System.Drawing.Color.Transparent;
             this.pb_Check_Concepting.Image = global::SMProofOfConcept.Properties.Resources.Green_check_mark;
-            this.pb_Check_Concepting.Location = new System.Drawing.Point(87, 216);
+            this.pb_Check_Concepting.Location = new System.Drawing.Point(87, 206);
             this.pb_Check_Concepting.Name = "pb_Check_Concepting";
             this.pb_Check_Concepting.Size = new System.Drawing.Size(25, 25);
             this.pb_Check_Concepting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -166,7 +174,7 @@
             // 
             this.pb_UI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_UI.Image = global::SMProofOfConcept.Properties.Resources.UX;
-            this.pb_UI.Location = new System.Drawing.Point(402, 141);
+            this.pb_UI.Location = new System.Drawing.Point(402, 131);
             this.pb_UI.Name = "pb_UI";
             this.pb_UI.Size = new System.Drawing.Size(100, 100);
             this.pb_UI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +186,7 @@
             // 
             this.pb_Research.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Research.Image = global::SMProofOfConcept.Properties.Resources.research;
-            this.pb_Research.Location = new System.Drawing.Point(272, 141);
+            this.pb_Research.Location = new System.Drawing.Point(272, 131);
             this.pb_Research.Name = "pb_Research";
             this.pb_Research.Size = new System.Drawing.Size(100, 100);
             this.pb_Research.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,7 +198,7 @@
             // 
             this.pb_Concepting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Concepting.Image = global::SMProofOfConcept.Properties.Resources.concepting;
-            this.pb_Concepting.Location = new System.Drawing.Point(12, 141);
+            this.pb_Concepting.Location = new System.Drawing.Point(12, 131);
             this.pb_Concepting.Name = "pb_Concepting";
             this.pb_Concepting.Size = new System.Drawing.Size(100, 100);
             this.pb_Concepting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +210,7 @@
             // 
             this.pb_Database.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pb_Database.Image = global::SMProofOfConcept.Properties.Resources.database;
-            this.pb_Database.Location = new System.Drawing.Point(142, 141);
+            this.pb_Database.Location = new System.Drawing.Point(142, 131);
             this.pb_Database.Name = "pb_Database";
             this.pb_Database.Size = new System.Drawing.Size(100, 100);
             this.pb_Database.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -258,11 +266,91 @@
             this.pb_C.TabStop = false;
             this.pb_C.Click += new System.EventHandler(this.pb_C_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(54, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "C";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(181, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "C#";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(307, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Java";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(439, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Web";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(31, 234);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Concepting";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(165, 234);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Database";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(294, 234);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 13);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Onderzoek";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(443, 234);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(18, 13);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "UI";
+            // 
             // SelecteerVaardigheden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 316);
+            this.ClientSize = new System.Drawing.Size(517, 303);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pb_Check_UI);
             this.Controls.Add(this.pb_Check_Research);
             this.Controls.Add(this.pb_Check_Database);
@@ -302,6 +390,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_csharp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_C)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -324,5 +413,13 @@
         private System.Windows.Forms.PictureBox pb_Check_Database;
         private System.Windows.Forms.PictureBox pb_Check_Research;
         private System.Windows.Forms.PictureBox pb_Check_UI;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -373,6 +373,7 @@ namespace SMProofOfConcept
         private void tsmi_Ververs_Click(object sender, EventArgs e)
         {
             RefreshRequireFeedback();
+            UpdateRatings();
         }
 
         private void RefreshRequireFeedback()

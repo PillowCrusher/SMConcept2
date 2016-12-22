@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lb_Naam = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             this.pb_Samenwerking = new System.Windows.Forms.PictureBox();
             this.pb_Inzet = new System.Windows.Forms.PictureBox();
             this.pb_Rating = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Verantwoordelijkheid_3)).BeginInit();
@@ -428,5 +430,6 @@
         private System.Windows.Forms.Button btn_Statistieken;
         private System.Windows.Forms.Button btn_Verantwoordelijkheden;
         private System.Windows.Forms.Button btn_Vaardigheden;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

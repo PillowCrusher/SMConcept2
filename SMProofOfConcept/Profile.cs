@@ -61,9 +61,10 @@ namespace SMProofOfConcept
                     pb_Skills[i].Image = Properties.Resources.Blauw_vierkant;
                 }
                 else
-                { 
+                {
                     Enum.TryParse(skills[i].Skill, out skillEnum);
                     pb_Skills[i].Image = GetSkillImage(skillEnum);
+                    toolTip1.SetToolTip(pb_Skills[i], skills[i].Skill);
                 }
             }
         }
@@ -107,6 +108,7 @@ namespace SMProofOfConcept
                 {
                     Enum.TryParse(responsibilities[i].Responsibility, out responsEnum);
                     pb_Responsibilities[i].Image = GetResponsibilityImage(responsEnum);
+                    toolTip1.SetToolTip(pb_Responsibilities[i], responsibilities[i].Responsibility);
                 }
             }
         }
@@ -184,5 +186,6 @@ namespace SMProofOfConcept
             Graphs graphsForm = new Graphs(profileName);
             graphsForm.ShowDialog();
         }
+
     }
 }
