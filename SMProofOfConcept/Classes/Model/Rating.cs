@@ -30,6 +30,11 @@ namespace SMProofOfConcept.Classes.Model
             return type;
         }
 
+       public DateTime GetDateTime()
+       {
+           return dateTime;
+       }
+
        public int CompareTo(Rating other)
        {
            return this.dateTime.CompareTo(other.dateTime);

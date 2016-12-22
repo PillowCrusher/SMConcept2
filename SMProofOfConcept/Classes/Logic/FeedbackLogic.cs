@@ -18,6 +18,12 @@ namespace SMProofOfConcept.Classes.Logic
             this.login = login;
             dbCon = new DatabaseConnection();
         }
+
+
+        public FeedbackLogic()
+        {
+            dbCon = new DatabaseConnection();
+        }
         public bool DoPeopleWantFeedback()
         {
             string query = "SELECT * FROM SMRequireFeedback WHERE AskedTo = '";
@@ -73,9 +79,35 @@ namespace SMProofOfConcept.Classes.Logic
             }
             dbCon.sendQuery(query);
         }
-    }
+    
 
-    public class DatabaseRequereFeedback
+
+    public void SendTestRatings(List<DatabaseRating> ratings)
+    {
+        int countdown = ratings.Count;
+        string query = "INSERT INTO SMRatings (RatingId, Name, Rating, Category, DateTime) VALUES (";
+            DateTime current = new DateTime();
+        current = DateTime.Now;
+        foreach (DatabaseRating rating in ratings)
+        {
+            current = current.AddDays(-8);
+            countdown--;
+            if (countdown == 0)
+            {
+                query += "NULL, '" + rating.Name + "', '" + rating.Rating + "', '" + rating.Category + "', '" +
+                    current + "')";
+            }
+            else
+            {
+                query += "NULL, '" + rating.Name + "', '" + rating.Rating + "', '" + rating.Category + "', '" +
+                   current + "'), (";
+            }
+        }
+        dbCon.sendQuery(query);
+    }
+}
+
+public class DatabaseRequereFeedback
     {
         public string AskedFrom { get; set; }
         public string AskedTo { get; set; }
