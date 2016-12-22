@@ -121,5 +121,17 @@ namespace SMProofOfConcept.Classes.Database
         public string Rating { get; set; }
         public string Category { get; set; }
         public string DateTime { get; set; }
+
+        public DatabaseRating()
+        {
+        }
+
+        public DatabaseRating(string Name, string Rating, string Category, string DateTime)
+        {
+            this.Name = Name;
+            this.Rating = Rating;
+            this.Category = Category;
+            this.DateTime = DateTime;
+        }
     }
 }

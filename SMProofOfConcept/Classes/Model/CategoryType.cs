@@ -6,6 +6,7 @@
         Onderzoek,
         Programmeren,
         Samenwerken,
-        Concepten
+        Concepten,
+        Null
     }
 }
