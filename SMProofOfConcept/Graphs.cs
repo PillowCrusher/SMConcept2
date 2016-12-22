@@ -43,8 +43,6 @@ namespace SMProofOfConcept
                 databaseConnection.sendRatingQuery("SELECT * FROM SMRatings WHERE Name = '" + name + "'");
             ratings.Sort();
             List<CategoryType> selectedTypes = new List<CategoryType>();
-            selectedTypes.Add(CategoryType.Concepten);
-            selectedTypes.Add(CategoryType.Inzet);
             selectedTypes.Add(CategoryType.Null);
             fillChart(selectedTypes);
         }
