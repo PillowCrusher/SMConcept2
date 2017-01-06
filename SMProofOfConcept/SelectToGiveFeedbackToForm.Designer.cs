@@ -210,6 +210,7 @@
             this.pb_Cas_Rating.TabIndex = 13;
             this.pb_Cas_Rating.TabStop = false;
             this.pb_Cas_Rating.Click += new System.EventHandler(this.pb_Cas_Rating_Click);
+            this.pb_Cas_Rating.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_Cas_Rating_Paint);
             // 
             // pb_Dennis_Rating
             // 
@@ -222,6 +223,7 @@
             this.pb_Dennis_Rating.TabIndex = 14;
             this.pb_Dennis_Rating.TabStop = false;
             this.pb_Dennis_Rating.Click += new System.EventHandler(this.pb_Dennis_Rating_Click);
+            this.pb_Dennis_Rating.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_Dennis_Rating_Paint);
             // 
             // pb_Jeroen_Rating
             // 
@@ -234,6 +236,7 @@
             this.pb_Jeroen_Rating.TabIndex = 15;
             this.pb_Jeroen_Rating.TabStop = false;
             this.pb_Jeroen_Rating.Click += new System.EventHandler(this.pb_Jeroen_Rating_Click);
+            this.pb_Jeroen_Rating.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_Jeroen_Rating_Paint);
             // 
             // pb_John_Rating
             // 
@@ -246,6 +249,7 @@
             this.pb_John_Rating.TabIndex = 16;
             this.pb_John_Rating.TabStop = false;
             this.pb_John_Rating.Click += new System.EventHandler(this.pb_John_Rating_Click);
+            this.pb_John_Rating.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_John_Rating_Paint);
             // 
             // pb_Mark_Rating
             // 
@@ -258,6 +262,7 @@
             this.pb_Mark_Rating.TabIndex = 17;
             this.pb_Mark_Rating.TabStop = false;
             this.pb_Mark_Rating.Click += new System.EventHandler(this.pb_Mark_Rating_Click);
+            this.pb_Mark_Rating.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_Mark_Rating_Paint);
             // 
             // pb_Ricky_Rating
             // 
@@ -270,6 +275,7 @@
             this.pb_Ricky_Rating.TabIndex = 18;
             this.pb_Ricky_Rating.TabStop = false;
             this.pb_Ricky_Rating.Click += new System.EventHandler(this.pb_Ricky_Rating_Click);
+            this.pb_Ricky_Rating.Paint += new System.Windows.Forms.PaintEventHandler(this.pb_Ricky_Rating_Paint);
             // 
             // timer1
             // 
@@ -283,26 +289,26 @@
             this.tsmi_Geef_Feedback,
             this.tsmi_Geef_Rating});
             this.cms_Profile_Menu.Name = "cms_Profile_Menu";
-            this.cms_Profile_Menu.Size = new System.Drawing.Size(153, 92);
+            this.cms_Profile_Menu.Size = new System.Drawing.Size(150, 70);
             // 
             // tsmi_Profiel
             // 
             this.tsmi_Profiel.Name = "tsmi_Profiel";
-            this.tsmi_Profiel.Size = new System.Drawing.Size(152, 22);
+            this.tsmi_Profiel.Size = new System.Drawing.Size(149, 22);
             this.tsmi_Profiel.Text = "Profiel";
             this.tsmi_Profiel.Click += new System.EventHandler(this.tsmi_Profiel_Click);
             // 
             // tsmi_Geef_Feedback
             // 
             this.tsmi_Geef_Feedback.Name = "tsmi_Geef_Feedback";
-            this.tsmi_Geef_Feedback.Size = new System.Drawing.Size(152, 22);
+            this.tsmi_Geef_Feedback.Size = new System.Drawing.Size(149, 22);
             this.tsmi_Geef_Feedback.Text = "Geef feedback";
             this.tsmi_Geef_Feedback.Click += new System.EventHandler(this.tsmi_Geef_Feedback_Click);
             // 
             // tsmi_Geef_Rating
             // 
             this.tsmi_Geef_Rating.Name = "tsmi_Geef_Rating";
-            this.tsmi_Geef_Rating.Size = new System.Drawing.Size(152, 22);
+            this.tsmi_Geef_Rating.Size = new System.Drawing.Size(149, 22);
             this.tsmi_Geef_Rating.Text = "Geef rating";
             this.tsmi_Geef_Rating.Click += new System.EventHandler(this.tsmi_Geef_Rating_Click);
             // 

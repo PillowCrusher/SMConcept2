@@ -30,7 +30,7 @@ namespace SMProofOfConcept.Classes.Logic
             query += login.Username + "'";
 
             string jsonString = dbCon.sendQuery(query);
-            DatabaseRequereFeedback[] dbRequireFb = JsonConvert.DeserializeObject<DatabaseRequereFeedback[]>(jsonString);
+            DatabaseRequireFeedback[] dbRequireFb = JsonConvert.DeserializeObject<DatabaseRequireFeedback[]>(jsonString);
 
             if(dbRequireFb.Count() == 0)
             {
@@ -42,19 +42,32 @@ namespace SMProofOfConcept.Classes.Logic
             }
         }
 
-        public DatabaseRequereFeedback[] GetRequireFeedback()
+        public DatabaseRequireFeedback[] GetRequireFeedback()
         {
             string query = "SELECT * FROM SMRequireFeedback WHERE AskedTo = '";
             query += login.Username + "'";
 
             string jsonString = dbCon.sendQuery(query);
-            return JsonConvert.DeserializeObject<DatabaseRequereFeedback[]>(jsonString);   
+            return JsonConvert.DeserializeObject<DatabaseRequireFeedback[]>(jsonString);   
         }
 
-        public void DeleteRequireFeedback()
+        public void RequireFeedbackIsShown(DatabaseRequireFeedback[] list, bool isShown)
         {
-            string query = "DELETE FROM SMRequireFeedback WHERE AskedTo = '";
-            query += login.Username + "'";
+            if (list.Count() == 0) return;
+            string query = "UPDATE SMRequireFeedback SET IsShown = '" + isShown.ToString() + "' WHERE ";
+            bool isFirst = true;
+            foreach (DatabaseRequireFeedback dbRequire in list)
+            {
+                if(isFirst)
+                {
+                    query += "RequireFeedbackId = '" + dbRequire.RequireFeedbackId + "'";
+                    isFirst = false;
+                }
+                else
+                {
+                    query += " OR RequireFeedbackId = '" + dbRequire.RequireFeedbackId + "'";
+                }
+            }
             dbCon.sendQuery(query);
         }
 
@@ -107,10 +120,13 @@ namespace SMProofOfConcept.Classes.Logic
     }
 }
 
-public class DatabaseRequereFeedback
+public class DatabaseRequireFeedback
     {
+        public string RequireFeedbackId { get; set; }
         public string AskedFrom { get; set; }
         public string AskedTo { get; set; }
         public string Category { get; set; }
+        public string Question { get; set; }
+        public string IsShown { get; set; }
     }
 }

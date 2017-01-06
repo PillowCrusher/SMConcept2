@@ -42,7 +42,7 @@ namespace SMProofOfConcept
         private void btn_Aanvragen_Click(object sender, EventArgs e)
         {
             DatabaseConnection dbCon = new DatabaseConnection();
-            string query = "INSERT INTO SMRequireFeedback (RequireFeedbackId, AskedFrom, AskedTo, Category) VALUES (NULL, '";
+            string query = "INSERT INTO SMRequireFeedback (RequireFeedbackId, AskedFrom, AskedTo, Category, Question, IsShown) VALUES (NULL, '";
 
             List<string> names = GetNames();
             List<string> categories = GetCategories();
@@ -62,7 +62,9 @@ namespace SMProofOfConcept
                     {
                         query += username + "', '";
                         query += name + "', '";
-                        query += categorie + "')";
+                        query += categorie + "', '";
+                        query += "" + "', '";
+                        query += "False" + "')";
                         isFirst = false;
                     }
                     else
@@ -70,7 +72,9 @@ namespace SMProofOfConcept
                         query += ", (NULL, '";
                         query += username + "', '";
                         query += name + "', '";
-                        query += categorie + "')";
+                        query += categorie + "', '";
+                        query += "" + "', '";
+                        query += "False" + "')";
                     }                
                 }
             }

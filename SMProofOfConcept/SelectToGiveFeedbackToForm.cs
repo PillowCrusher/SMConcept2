@@ -51,27 +51,14 @@ namespace SMProofOfConcept
 
         private void UpdateRatings()
         {
-            PaintRating(pb_Cas_Rating, ratingLogic.getRating("Cas"));
-            PaintRating(pb_Dennis_Rating, ratingLogic.getRating("Dennis"));
-            PaintRating(pb_Jeroen_Rating, ratingLogic.getRating("Jeroen"));
-            PaintRating(pb_John_Rating, ratingLogic.getRating("John"));
-            PaintRating(pb_Mark_Rating, ratingLogic.getRating("Mark"));
-            PaintRating(pb_Ricky_Rating, ratingLogic.getRating("Ricky"));
+            pb_Cas_Rating.Invalidate();
+            pb_Dennis_Rating.Invalidate();
+            pb_Jeroen_Rating.Invalidate();
+            pb_John_Rating.Invalidate();
+            pb_Mark_Rating.Invalidate();
+            pb_Ricky_Rating.Invalidate();
         }
-
-        private void PaintRating(PictureBox pb, string text)
-        {
-            pb.Paint += new PaintEventHandler((sender, e) =>
-            {
-                e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-                SizeF textSize = e.Graphics.MeasureString(text, Font);
-                PointF locationToDraw = new PointF();
-                locationToDraw.X = (pb.Width / 2) - (textSize.Width / 2);
-                locationToDraw.Y = (pb.Height / 2) - (textSize.Height / 2);
-
-                e.Graphics.DrawString(text, Font, Brushes.Black, locationToDraw);
-            });
-        }
+               
 
         private void btn_askFeedback_Click(object sender, EventArgs e)
         {
@@ -378,6 +365,7 @@ namespace SMProofOfConcept
         private void tsmi_Ververs_Click(object sender, EventArgs e)
         {
             RefreshRequireFeedback();
+            UpdateRatings();
         }
 
         private void RefreshRequireFeedback()
@@ -387,18 +375,24 @@ namespace SMProofOfConcept
             {
                 if (feedbackLogic.DoPeopleWantFeedback())
                 {
-                    DatabaseRequereFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback();
+                    DatabaseRequireFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback();
                     string message = "";
-                    foreach (DatabaseRequereFeedback dbReqFb in dbRequireFb)
+                    foreach (DatabaseRequireFeedback dbReqFb in dbRequireFb)
                     {
-                        message += dbReqFb.AskedFrom;
-                        message += " wil graag feedback in de categorie ";
-                        message += dbReqFb.Category;
-                        message += "\n";
+                        if (dbReqFb.IsShown == false.ToString())
+                        {
+                            message += dbReqFb.AskedFrom;
+                            message += " wil graag feedback in de categorie ";
+                            message += dbReqFb.Category;
+                            message += "\n";
+                        }
                     }
-                    feedbackLogic.DeleteRequireFeedback();
+                    feedbackLogic.RequireFeedbackIsShown(dbRequireFb, true);
 
-                    MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    if (message != "")
+                    {
+                        MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    }
                 }
             }
         }
@@ -409,12 +403,58 @@ namespace SMProofOfConcept
             if (dbCon.dbCheckConnection() == true)
             {
                 AddRating addRatingFrom = new AddRating(login, contextMenuName);
-                addRatingFrom.ShowDialog();
+                addRatingFrom.FormClosed += AddRatingFormClosed;
+                addRatingFrom.ShowDialog();           
             }
             else
             {
                 MessageBox.Show("please check your internet connection");
             }
+        }
+
+        private void AddRatingFormClosed(object sender, FormClosedEventArgs e)
+        {
+            UpdateRatings();
+        }
+
+        private void PaintRating(PictureBox pb, string text, PaintEventArgs e)
+        {
+            e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            SizeF textSize = e.Graphics.MeasureString(text, Font);
+            PointF locationToDraw = new PointF();
+            locationToDraw.X = (pb.Width / 2) - (textSize.Width / 2);
+            locationToDraw.Y = (pb.Height / 2) - (textSize.Height / 2);
+            e.Graphics.DrawString(text, Font, Brushes.Black, locationToDraw);
+        }
+
+        private void pb_Cas_Rating_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Cas_Rating, ratingLogic.getRating("Cas"), e);
+        }
+
+        private void pb_Dennis_Rating_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Dennis_Rating, ratingLogic.getRating("Dennis"), e);
+        }
+
+        private void pb_Jeroen_Rating_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Jeroen_Rating, ratingLogic.getRating("Jeroen"), e);
+        }
+
+        private void pb_John_Rating_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Jeroen_Rating, ratingLogic.getRating("John"), e);
+        }
+
+        private void pb_Mark_Rating_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Mark_Rating, ratingLogic.getRating("Mark"), e);
+        }
+
+        private void pb_Ricky_Rating_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Ricky_Rating, ratingLogic.getRating("Ricky"), e);
         }
     }
 }
