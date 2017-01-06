@@ -34,6 +34,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_Open = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmi_Ververs = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_Log_Uit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_Afsluiten = new System.Windows.Forms.ToolStripMenuItem();
             this.pb_Dennis = new System.Windows.Forms.PictureBox();
@@ -52,7 +53,7 @@
             this.cms_Profile_Menu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmi_Profiel = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_Geef_Feedback = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmi_Ververs = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmi_Geef_Rating = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Dennis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Jeroen)).BeginInit();
@@ -96,26 +97,33 @@
             this.tsmi_Log_Uit,
             this.tsmi_Afsluiten});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(122, 92);
             // 
             // tsmi_Open
             // 
             this.tsmi_Open.Name = "tsmi_Open";
-            this.tsmi_Open.Size = new System.Drawing.Size(152, 22);
+            this.tsmi_Open.Size = new System.Drawing.Size(121, 22);
             this.tsmi_Open.Text = "Open";
             this.tsmi_Open.Click += new System.EventHandler(this.tsmi_Open_Click);
+            // 
+            // tsmi_Ververs
+            // 
+            this.tsmi_Ververs.Name = "tsmi_Ververs";
+            this.tsmi_Ververs.Size = new System.Drawing.Size(121, 22);
+            this.tsmi_Ververs.Text = "Ververs";
+            this.tsmi_Ververs.Click += new System.EventHandler(this.tsmi_Ververs_Click);
             // 
             // tsmi_Log_Uit
             // 
             this.tsmi_Log_Uit.Name = "tsmi_Log_Uit";
-            this.tsmi_Log_Uit.Size = new System.Drawing.Size(152, 22);
+            this.tsmi_Log_Uit.Size = new System.Drawing.Size(121, 22);
             this.tsmi_Log_Uit.Text = "Log uit";
             this.tsmi_Log_Uit.Click += new System.EventHandler(this.tsmi_Log_Uit_Click);
             // 
             // tsmi_Afsluiten
             // 
             this.tsmi_Afsluiten.Name = "tsmi_Afsluiten";
-            this.tsmi_Afsluiten.Size = new System.Drawing.Size(152, 22);
+            this.tsmi_Afsluiten.Size = new System.Drawing.Size(121, 22);
             this.tsmi_Afsluiten.Text = "Afsluiten";
             this.tsmi_Afsluiten.Click += new System.EventHandler(this.tsmi_Afsluiten_Click_1);
             // 
@@ -272,30 +280,31 @@
             // 
             this.cms_Profile_Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmi_Profiel,
-            this.tsmi_Geef_Feedback});
+            this.tsmi_Geef_Feedback,
+            this.tsmi_Geef_Rating});
             this.cms_Profile_Menu.Name = "cms_Profile_Menu";
-            this.cms_Profile_Menu.Size = new System.Drawing.Size(150, 48);
+            this.cms_Profile_Menu.Size = new System.Drawing.Size(153, 92);
             // 
             // tsmi_Profiel
             // 
             this.tsmi_Profiel.Name = "tsmi_Profiel";
-            this.tsmi_Profiel.Size = new System.Drawing.Size(149, 22);
+            this.tsmi_Profiel.Size = new System.Drawing.Size(152, 22);
             this.tsmi_Profiel.Text = "Profiel";
             this.tsmi_Profiel.Click += new System.EventHandler(this.tsmi_Profiel_Click);
             // 
             // tsmi_Geef_Feedback
             // 
             this.tsmi_Geef_Feedback.Name = "tsmi_Geef_Feedback";
-            this.tsmi_Geef_Feedback.Size = new System.Drawing.Size(149, 22);
+            this.tsmi_Geef_Feedback.Size = new System.Drawing.Size(152, 22);
             this.tsmi_Geef_Feedback.Text = "Geef feedback";
             this.tsmi_Geef_Feedback.Click += new System.EventHandler(this.tsmi_Geef_Feedback_Click);
             // 
-            // tsmi_Ververs
+            // tsmi_Geef_Rating
             // 
-            this.tsmi_Ververs.Name = "tsmi_Ververs";
-            this.tsmi_Ververs.Size = new System.Drawing.Size(152, 22);
-            this.tsmi_Ververs.Text = "Ververs";
-            this.tsmi_Ververs.Click += new System.EventHandler(this.tsmi_Ververs_Click);
+            this.tsmi_Geef_Rating.Name = "tsmi_Geef_Rating";
+            this.tsmi_Geef_Rating.Size = new System.Drawing.Size(152, 22);
+            this.tsmi_Geef_Rating.Text = "Geef rating";
+            this.tsmi_Geef_Rating.Click += new System.EventHandler(this.tsmi_Geef_Rating_Click);
             // 
             // SelectToGiveFeedbackToForm
             // 
@@ -366,5 +375,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmi_Profiel;
         private System.Windows.Forms.ToolStripMenuItem tsmi_Geef_Feedback;
         private System.Windows.Forms.ToolStripMenuItem tsmi_Ververs;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_Geef_Rating;
     }
 }

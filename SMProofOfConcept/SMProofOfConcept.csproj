@@ -68,6 +68,12 @@
     <Compile Include="Classes\Model\Rating.cs" />
     <Compile Include="Classes\Model\Responsibility.cs" />
     <Compile Include="Classes\Model\Skills.cs" />
+    <Compile Include="CompareRating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompareRating.Designer.cs">
+      <DependentUpon>CompareRating.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="AddRating.resx">
       <DependentUpon>AddRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompareRating.resx">
+      <DependentUpon>CompareRating.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -64,7 +64,6 @@ namespace SMProofOfConcept
             pb.Paint += new PaintEventHandler((sender, e) =>
             {
                 e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-
                 SizeF textSize = e.Graphics.MeasureString(text, Font);
                 PointF locationToDraw = new PointF();
                 locationToDraw.X = (pb.Width / 2) - (textSize.Width / 2);
@@ -235,92 +234,98 @@ namespace SMProofOfConcept
 
         private void pb_Cas_Rating_Click(object sender, EventArgs e)
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
-            if (dbCon.dbCheckConnection() == true)
+            contextMenuName = "Cas";
+
+            if (login.Username == contextMenuName)
             {
-                if (login.Username == "Cas") return;
-                AddRating addRatingFrom = new AddRating(login, "Cas");
-                addRatingFrom.ShowDialog();
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                MessageBox.Show("please check your internet connection");
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_Dennis_Rating_Click(object sender, EventArgs e)
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
-            if (dbCon.dbCheckConnection() == true)
+            contextMenuName = "Dennis";
+
+            if (login.Username == contextMenuName)
             {
-                if (login.Username == "Dennis") return;
-                AddRating addRatingFrom = new AddRating(login, "Dennis");
-                addRatingFrom.ShowDialog();
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                MessageBox.Show("please check your internet connection");
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_Jeroen_Rating_Click(object sender, EventArgs e)
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
-            if (dbCon.dbCheckConnection() == true)
+            contextMenuName = "Jeroen";
+
+            if (login.Username == contextMenuName)
             {
-                if (login.Username == "Jeroen") return;
-                AddRating addRatingFrom = new AddRating(login, "Jeroen");
-                addRatingFrom.ShowDialog();
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                MessageBox.Show("please check your internet connection");
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_John_Rating_Click(object sender, EventArgs e)
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
-            if (dbCon.dbCheckConnection() == true)
+            contextMenuName = "John";
+
+            if (login.Username == contextMenuName)
             {
-                if (login.Username == "John") return;
-                AddRating addRatingFrom = new AddRating(login, "John");
-                addRatingFrom.ShowDialog();
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                MessageBox.Show("please check your internet connection");
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_Mark_Rating_Click(object sender, EventArgs e)
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
-            if (dbCon.dbCheckConnection() == true)
+            contextMenuName = "Mark";
+
+            if (login.Username == contextMenuName)
             {
-                if (login.Username == "Mark") return;
-                AddRating addRatingFrom = new AddRating(login, "Mark");
-                addRatingFrom.ShowDialog();
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                MessageBox.Show("please check your ineternet connection");
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void pb_Ricky_Rating_Click(object sender, EventArgs e)
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
-            if (dbCon.dbCheckConnection() == true)
+            contextMenuName = "Ricky";
+
+            if (login.Username == contextMenuName)
             {
-                if (login.Username == "Ricky") return;
-                AddRating addRatingFrom = new AddRating(login, "Ricky");
-                addRatingFrom.ShowDialog();
+                tsmi_Geef_Feedback.Text = "Jouw feedback";
             }
             else
             {
-                MessageBox.Show("please check your internet connection");
+                tsmi_Geef_Feedback.Text = "Geef feedback";
             }
+
+            cms_Profile_Menu.Show(Cursor.Position);
         }
 
         private void tsmi_Log_Uit_Click(object sender, EventArgs e)
@@ -373,7 +378,6 @@ namespace SMProofOfConcept
         private void tsmi_Ververs_Click(object sender, EventArgs e)
         {
             RefreshRequireFeedback();
-            UpdateRatings();
         }
 
         private void RefreshRequireFeedback()
@@ -396,6 +400,20 @@ namespace SMProofOfConcept
 
                     MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
+            }
+        }
+
+        private void tsmi_Geef_Rating_Click(object sender, EventArgs e)
+        {
+            DatabaseConnection dbCon = new DatabaseConnection();
+            if (dbCon.dbCheckConnection() == true)
+            {
+                AddRating addRatingFrom = new AddRating(login, contextMenuName);
+                addRatingFrom.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("please check your internet connection");
             }
         }
     }

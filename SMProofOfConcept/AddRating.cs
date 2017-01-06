@@ -26,27 +26,42 @@ namespace SMProofOfConcept
             feedbackLogic = new FeedbackLogic(login);
 
             lb_Name.Text += " " + giveRatingTo;
+            if (login.Username == giveRatingTo) btn_Geef_Rating.Text = "Vergelijk rating";
         }
 
         private void btn_Geef_Rating_Click(object sender, EventArgs e)
         {
-            DatabaseConnection dbCon = new DatabaseConnection();
-            if (dbCon.dbCheckConnection() == true)
+            if (login.Username == giveRatingTo)
             {
-                List<DatabaseRating> ratings = GetRatings();
-                if (ratings.Count == 0)
-                {
-                    MessageBox.Show("Geef tenminste op 1 categorie feedback");
-                    return;
-                }
-                feedbackLogic.SendRatings(GetRatings());
-
-                Close();
+                CompareRating comRatForm = new CompareRating(giveRatingTo, (double)nud_Inzet.Value, (double)nud_Samenwerking.Value, (double)nud_Programmeren.Value, (double)nud_Concepting.Value, (double)nud_Onderzoek.Value);
+                comRatForm.FormClosed += CompareFormClosed;
+                comRatForm.ShowDialog();
             }
             else
             {
-                MessageBox.Show("please check your internet connection");
+                DatabaseConnection dbCon = new DatabaseConnection();
+                if (dbCon.dbCheckConnection() == true)
+                {
+                    List<DatabaseRating> ratings = GetRatings();
+                    if (ratings.Count == 0)
+                    {
+                        MessageBox.Show("Geef tenminste op 1 categorie feedback");
+                        return;
+                    }
+                    feedbackLogic.SendRatings(GetRatings());
+
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("please check your internet connection");
+                }
             }
+        }
+
+        private void CompareFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Close();
         }
 
         private List<DatabaseRating> GetRatings()
