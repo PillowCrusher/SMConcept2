@@ -42,16 +42,16 @@ namespace SMProofOfConcept.Classes.Logic
             }
         }
 
-        public DatabaseRequireFeedback[] GetRequireFeedback()
+        public DatabaseRequireFeedback[] GetRequireFeedback(string name)
         {
             string query = "SELECT * FROM SMRequireFeedback WHERE AskedTo = '";
-            query += login.Username + "'";
+            query += name + "'";
 
             string jsonString = dbCon.sendQuery(query);
             return JsonConvert.DeserializeObject<DatabaseRequireFeedback[]>(jsonString);   
         }
 
-        public void RequireFeedbackIsShown(DatabaseRequireFeedback[] list, bool isShown)
+        public void SetRequireFeedbackIsShown(DatabaseRequireFeedback[] list, bool isShown)
         {
             if (list.Count() == 0) return;
             string query = "UPDATE SMRequireFeedback SET IsShown = '" + isShown.ToString() + "' WHERE ";
@@ -69,6 +69,18 @@ namespace SMProofOfConcept.Classes.Logic
                 }
             }
             dbCon.sendQuery(query);
+        }
+
+        public void DeleteRequireFeedback(DatabaseRequireFeedback requireFB)
+        {
+            string query = "DELETE FROM SMRequireFeedback WHERE AskedFrom = '";
+            query += requireFB.AskedFrom + "' AND AskedTo = '";
+            query += requireFB.AskedTo + "' AND Category = '";
+            query += requireFB.Category + "' AND Question = '";
+            query += requireFB.Question + "' AND IsShown = '";
+            query += requireFB.IsShown + "'";
+
+            string jsonString = dbCon.sendQuery(query);
         }
 
         public void SendRatings(List<DatabaseRating> ratings)
@@ -128,5 +140,10 @@ public class DatabaseRequireFeedback
         public string Category { get; set; }
         public string Question { get; set; }
         public string IsShown { get; set; }
+
+        public override string ToString()
+        {
+            return AskedFrom + " wil graag feedback in de categorie " + Category;
+        }
     }
 }

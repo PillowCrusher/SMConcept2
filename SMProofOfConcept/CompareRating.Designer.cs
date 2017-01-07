@@ -347,7 +347,10 @@
             this.Controls.Add(this.lb_Naam);
             this.Controls.Add(this.pb_Inzet);
             this.Controls.Add(this.pb_Rating);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "CompareRating";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompareRating";
             ((System.ComponentModel.ISupportInitialize)(this.pb_Onderzoeken)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Concepting)).EndInit();

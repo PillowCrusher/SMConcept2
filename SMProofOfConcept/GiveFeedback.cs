@@ -16,12 +16,46 @@ namespace SMProofOfConcept
     {
         private DatabaseLogin login;
         private string sendTo;
+        public event EventHandler isConfirmed;
         public GiveFeedback(DatabaseLogin login, string sendTo)
         {
             this.login = login;
             this.sendTo = sendTo;
             InitializeComponent();
             lb_Name.Text = "Geef feedback aan " + sendTo;
+        }
+
+        public GiveFeedback(DatabaseLogin login, string sendTo, CategoryType category)
+        {
+            this.login = login;
+            this.sendTo = sendTo;
+            InitializeComponent();
+            lb_Name.Text = "Geef feedback aan " + sendTo;
+            SetCategoryRadioButton(category);
+        }
+
+        private void SetCategoryRadioButton(CategoryType category)
+        {
+            switch(category)
+            {
+                case CategoryType.Inzet:
+                    rdb_Inzet.Checked = true;
+                    break;
+                case CategoryType.Samenwerken:
+                    rdb_Samenwerken.Checked = true;
+                    break;
+                case CategoryType.Programmeren:
+                    rdb_Programmeren.Checked = true;
+                    break;
+                case CategoryType.Concepten:
+                    rdb_Concepten.Checked = true;
+                    break;
+                case CategoryType.Onderzoek:
+                    rdb_Research.Checked = true;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -87,11 +121,17 @@ namespace SMProofOfConcept
                 Query += DateTime.Now.ToString() + "')";
                 db.sendQuery(Query);
                 Close();
+                OnConfirm(EventArgs.Empty);
             }
             else
             {
                 MessageBox.Show("please check your internet connection");
             }
+        }
+
+        protected virtual void OnConfirm(EventArgs e)
+        {
+            isConfirmed?.Invoke(this, e);
         }
     }
 }

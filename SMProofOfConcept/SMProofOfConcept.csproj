@@ -86,6 +86,12 @@
     <Compile Include="GetFeedback.Designer.cs">
       <DependentUpon>GetFeedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetRequireFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetRequireFeedback.Designer.cs">
+      <DependentUpon>GetRequireFeedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiveFeedback.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GetFeedback.resx">
       <DependentUpon>GetFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetRequireFeedback.resx">
+      <DependentUpon>GetRequireFeedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiveFeedback.resx">
       <DependentUpon>GiveFeedback.cs</DependentUpon>
@@ -210,6 +219,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Image\Circle_FB.png" />
     <None Include="Image\Green_check_mark.png" />
     <None Include="Image\Icons_ verantwoordelijkheden\Sfeerbeheer.png" />
     <None Include="Image\Icons_ verantwoordelijkheden\scrum.png" />

@@ -19,6 +19,8 @@ namespace SMProofOfConcept
         private FeedbackLogic feedbackLogic;
         private Form1 loginForm;
         private string contextMenuName = "";
+        private static int fontSize = 9;
+        private PictureBox pb_FeedbackCount;
 
         public SelectToGiveFeedbackToForm(DatabaseLogin login, Form1 loginForm)
         {
@@ -45,8 +47,64 @@ namespace SMProofOfConcept
             pb_Ricky_Rating.Parent = pb_Ricky;
             pb_Ricky_Rating.Location = new Point(pb_Ricky_Rating.Location.X - pb_Ricky.Location.X, pb_Ricky_Rating.Location.Y - pb_Ricky.Location.Y);
 
+
+
+            InitializeFeedbackCount();
             UpdateRatings();
+            //UpdateFeedbackCount();
             timer1.Start();
+        }
+
+        private void InitializeFeedbackCount()
+        {
+            pb_Cas_Feedback.Visible = false;
+            pb_Dennis_Feedback.Visible = false;
+            pb_Jeroen_Feedback.Visible = false;
+            pb_John_Feedback.Visible = false;
+            pb_Mark_Feedback.Visible = false;
+            pb_Ricky_Feedback.Visible = false;
+
+            switch (login.Username)
+            {
+                case "Cas":
+                    pb_Cas_Feedback.Visible = true;
+                    pb_Cas_Feedback.Parent = pb_Cas;
+                    pb_Cas_Feedback.Location = new Point(pb_Cas_Feedback.Location.X - pb_Cas.Location.X, pb_Cas_Feedback.Location.Y - pb_Cas.Location.Y);
+                    pb_FeedbackCount = pb_Cas_Feedback;
+                    break;
+                case "Dennis":
+                    pb_Dennis_Feedback.Visible = true;
+                    pb_Dennis_Feedback.Parent = pb_Dennis;
+                    pb_Dennis_Feedback.Location = new Point(pb_Dennis_Feedback.Location.X - pb_Dennis.Location.X, pb_Dennis_Feedback.Location.Y - pb_Dennis.Location.Y);
+                    pb_FeedbackCount = pb_Dennis_Feedback;
+                    break;
+                case "Jeroen":
+                    pb_Jeroen_Feedback.Visible = true;
+                    pb_Jeroen_Feedback.Parent = pb_Jeroen;
+                    pb_Jeroen_Feedback.Location = new Point(pb_Jeroen_Feedback.Location.X - pb_Jeroen.Location.X, pb_Jeroen_Feedback.Location.Y - pb_Jeroen.Location.Y);
+                    pb_FeedbackCount = pb_Jeroen_Feedback;
+                    break;
+                case "John":
+                    pb_John_Feedback.Visible = true;
+                    pb_John_Feedback.Parent = pb_John;
+                    pb_John_Feedback.Location = new Point(pb_John_Feedback.Location.X - pb_John.Location.X, pb_John_Feedback.Location.Y - pb_John.Location.Y);
+                    pb_FeedbackCount = pb_John_Feedback;
+                    break;
+                case "Mark":
+                    pb_Mark_Feedback.Visible = true;
+                    pb_Mark_Feedback.Parent = pb_Mark;
+                    pb_Mark_Feedback.Location = new Point(pb_Mark_Feedback.Location.X - pb_Mark.Location.X, pb_Mark_Feedback.Location.Y - pb_Mark.Location.Y);
+                    pb_FeedbackCount = pb_Mark_Feedback;
+                    break;
+                case "Ricky":
+                    pb_Ricky_Feedback.Visible = true;
+                    pb_Ricky_Feedback.Parent = pb_Ricky;
+                    pb_Ricky_Feedback.Location = new Point(pb_Ricky_Feedback.Location.X - pb_Ricky.Location.X, pb_Ricky_Feedback.Location.Y - pb_Ricky.Location.Y);
+                    pb_FeedbackCount = pb_Ricky_Feedback;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void UpdateRatings()
@@ -57,6 +115,11 @@ namespace SMProofOfConcept
             pb_John_Rating.Invalidate();
             pb_Mark_Rating.Invalidate();
             pb_Ricky_Rating.Invalidate();
+        }
+
+        private void UpdateFeedbackCount()
+        {
+            pb_FeedbackCount.Invalidate();
         }
                
 
@@ -366,6 +429,7 @@ namespace SMProofOfConcept
         {
             RefreshRequireFeedback();
             UpdateRatings();
+            UpdateFeedbackCount();
         }
 
         private void RefreshRequireFeedback()
@@ -375,7 +439,7 @@ namespace SMProofOfConcept
             {
                 if (feedbackLogic.DoPeopleWantFeedback())
                 {
-                    DatabaseRequireFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback();
+                    DatabaseRequireFeedback[] dbRequireFb = feedbackLogic.GetRequireFeedback(login.Username);
                     string message = "";
                     foreach (DatabaseRequireFeedback dbReqFb in dbRequireFb)
                     {
@@ -387,10 +451,11 @@ namespace SMProofOfConcept
                             message += "\n";
                         }
                     }
-                    feedbackLogic.RequireFeedbackIsShown(dbRequireFb, true);
+                    feedbackLogic.SetRequireFeedbackIsShown(dbRequireFb, true);
 
                     if (message != "")
                     {
+                        UpdateFeedbackCount();
                         MessageBox.Show(new Form { TopMost = true }, message, "Feedback aanvragen", MessageBoxButtons.OK, MessageBoxIcon.None);
                     }
                 }
@@ -417,44 +482,123 @@ namespace SMProofOfConcept
             UpdateRatings();
         }
 
-        private void PaintRating(PictureBox pb, string text, PaintEventArgs e)
+        private void PaintRating(PictureBox pb, string text, int fSize, PaintEventArgs e)
         {
+            Font f = Font;
             e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            SizeF textSize = e.Graphics.MeasureString(text, Font);
+            Font newFont = new Font(Font.FontFamily.Name, fSize);
+            SizeF textSize = e.Graphics.MeasureString(text, newFont);
             PointF locationToDraw = new PointF();
             locationToDraw.X = (pb.Width / 2) - (textSize.Width / 2);
             locationToDraw.Y = (pb.Height / 2) - (textSize.Height / 2);
-            e.Graphics.DrawString(text, Font, Brushes.Black, locationToDraw);
+            e.Graphics.DrawString(text, newFont, Brushes.Black, locationToDraw);
         }
 
         private void pb_Cas_Rating_Paint(object sender, PaintEventArgs e)
         {
-            PaintRating(pb_Cas_Rating, ratingLogic.getRating("Cas"), e);
+            PaintRating(pb_Cas_Rating, ratingLogic.getRating("Cas"), fontSize, e);
         }
 
         private void pb_Dennis_Rating_Paint(object sender, PaintEventArgs e)
         {
-            PaintRating(pb_Dennis_Rating, ratingLogic.getRating("Dennis"), e);
+            PaintRating(pb_Dennis_Rating, ratingLogic.getRating("Dennis"), fontSize, e);
         }
 
         private void pb_Jeroen_Rating_Paint(object sender, PaintEventArgs e)
         {
-            PaintRating(pb_Jeroen_Rating, ratingLogic.getRating("Jeroen"), e);
+            PaintRating(pb_Jeroen_Rating, ratingLogic.getRating("Jeroen"), fontSize, e);
         }
 
         private void pb_John_Rating_Paint(object sender, PaintEventArgs e)
         {
-            PaintRating(pb_Jeroen_Rating, ratingLogic.getRating("John"), e);
+            PaintRating(pb_Jeroen_Rating, ratingLogic.getRating("John"), fontSize, e);
         }
 
         private void pb_Mark_Rating_Paint(object sender, PaintEventArgs e)
         {
-            PaintRating(pb_Mark_Rating, ratingLogic.getRating("Mark"), e);
+            PaintRating(pb_Mark_Rating, ratingLogic.getRating("Mark"), fontSize, e);
         }
 
         private void pb_Ricky_Rating_Paint(object sender, PaintEventArgs e)
         {
-            PaintRating(pb_Ricky_Rating, ratingLogic.getRating("Ricky"), e);
+            PaintRating(pb_Ricky_Rating, ratingLogic.getRating("Ricky"), fontSize, e);
+        }
+
+        private void pb_Cas_Feedback_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Cas_Feedback, feedbackLogic.GetRequireFeedback("Cas").Count().ToString(), fontSize, e);
+        }
+
+        private void pb_Dennis_Feedback_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Dennis_Feedback, feedbackLogic.GetRequireFeedback("Dennis").Count().ToString(), fontSize, e);
+        }
+
+        private void pb_Jeroen_Feedback_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Jeroen_Feedback, feedbackLogic.GetRequireFeedback("Jeroen").Count().ToString(), fontSize, e);
+        }
+
+        private void pb_John_Feedback_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_John_Feedback, feedbackLogic.GetRequireFeedback("John").Count().ToString(), fontSize, e);
+        }
+
+        private void pb_Mark_Feedback_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Mark_Feedback, feedbackLogic.GetRequireFeedback("Mark").Count().ToString(), fontSize, e);
+        }
+
+        private void pb_Ricky_Feedback_Paint(object sender, PaintEventArgs e)
+        {
+            PaintRating(pb_Ricky_Feedback, feedbackLogic.GetRequireFeedback("Ricky").Count().ToString(), fontSize, e);
+        }
+
+        private void pb_Cas_Feedback_Click(object sender, EventArgs e)
+        {
+            GetRequireFeedback getRequireFeedbackForm = new GetRequireFeedback(login);
+            getRequireFeedbackForm.FormClosed += GetRequireFeedbackForm_FormClosed;
+            getRequireFeedbackForm.ShowDialog();
+        }
+
+        private void pb_Dennis_Feedback_Click(object sender, EventArgs e)
+        {
+            GetRequireFeedback getRequireFeedbackForm = new GetRequireFeedback(login);
+            getRequireFeedbackForm.FormClosed += GetRequireFeedbackForm_FormClosed;
+            getRequireFeedbackForm.ShowDialog();
+        }
+
+        private void pb_Jeroen_Feedback_Click(object sender, EventArgs e)
+        {
+            GetRequireFeedback getRequireFeedbackForm = new GetRequireFeedback(login);
+            getRequireFeedbackForm.FormClosed += GetRequireFeedbackForm_FormClosed;
+            getRequireFeedbackForm.ShowDialog();
+        }
+
+        private void pb_John_Feedback_Click(object sender, EventArgs e)
+        {
+            GetRequireFeedback getRequireFeedbackForm = new GetRequireFeedback(login);
+            getRequireFeedbackForm.FormClosed += GetRequireFeedbackForm_FormClosed;
+            getRequireFeedbackForm.ShowDialog();
+        }
+
+        private void pb_Mark_Feedback_Click(object sender, EventArgs e)
+        {
+            GetRequireFeedback getRequireFeedbackForm = new GetRequireFeedback(login);
+            getRequireFeedbackForm.FormClosed += GetRequireFeedbackForm_FormClosed;
+            getRequireFeedbackForm.ShowDialog();
+        }
+
+        private void pb_Ricky_Feedback_Click(object sender, EventArgs e)
+        {
+            GetRequireFeedback getRequireFeedbackForm = new GetRequireFeedback(login);
+            getRequireFeedbackForm.FormClosed += GetRequireFeedbackForm_FormClosed;
+            getRequireFeedbackForm.ShowDialog();
+        }
+
+        private void GetRequireFeedbackForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            UpdateFeedbackCount();
         }
     }
 }
