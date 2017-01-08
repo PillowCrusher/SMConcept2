@@ -9,24 +9,16 @@ namespace SMProofOfConcept.Classes.Database
 { 
     class DatabaseConnection
     {
-        /**
-	 * 
-	 * @param var
-	 */
+        private static string token = "AngjR7v{za-N*7T}";
         private string queryBuilder(string var)
         {
             //http://i291343.iris.fhict.nl/database.php?query=SELECT*FROM%20SMRatings
             return var.Replace(" ", "%20");
         }
 
-
-        /**
-         * 
-         * @param query
-         */
         public string sendQuery(string query)
         {
-            string querySend = "http://i291343.iris.fhict.nl/database.php?query=" + queryBuilder(query);
+            string querySend = "http://i291343.iris.fhict.nl/database.php?token=" + token + "&query=" + queryBuilder(query);
             string jsonString = "";
             try
             {
@@ -42,14 +34,9 @@ namespace SMProofOfConcept.Classes.Database
             return jsonString;
         }
 
-
-        /**
-         * 
-         * @param query
-         */
         public List<Rating> sendRatingQuery(string query)
         {
-            string querySend = "http://i291343.iris.fhict.nl/database.php?query=" + queryBuilder(query);
+            string querySend = "http://i291343.iris.fhict.nl/database.php?token=" + token + "&query=" + queryBuilder(query);
             string jsonString = "";
             List<Rating> result = new List<Rating>();
             try
@@ -67,10 +54,6 @@ namespace SMProofOfConcept.Classes.Database
             return result;
         }
 
-        /**
-         * 
-         * @param Json
-         */
         private List<Rating> convertJson(string jsonString)
         {
             List<Rating> result = new List<Rating>();
